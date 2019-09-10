@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactive : MonoBehaviour
+public class Interactive : MonoBehaviour, IInteract
 {
+
+    public bool canUse { get; set; }
 
     public GameObject voltimeterObj;
 
@@ -20,10 +22,25 @@ public class Interactive : MonoBehaviour
         voltimeterObj.SetActive(true);
     }
 
-    public void Interact()
+    public void Interaction()
     {
-        Debug.Log("Interage com o objeto");
+
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canUse = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canUse = false;
+        }
+    }
 
 }
