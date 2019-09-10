@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string objName;
-
-    public bool canCatch;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {

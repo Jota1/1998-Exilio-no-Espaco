@@ -5,11 +5,7 @@ using UnityEngine;
 public class Interactive : MonoBehaviour
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject voltimeterObj;
 
     public void UseItem(string item, string rightItem)
     {
@@ -21,7 +17,7 @@ public class Interactive : MonoBehaviour
 
     public void Voltimeter()
     {
-        Debug.Log("Utiliza o voltimetro");
+        voltimeterObj.SetActive(true);
     }
 
     public void Interact()
