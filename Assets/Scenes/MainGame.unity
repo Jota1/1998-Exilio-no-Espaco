@@ -563,7 +563,8 @@ MonoBehaviour:
   torqueForcer: 0.005
   turnSpeedZeroG: 0.0003
   blackImage: {fileID: 1651687503}
-  fala1_Carol: {fileID: 8300000, guid: 8dc8fecc7d8398a4ba5a09b88df88afb, type: 3}
+  fala1_Carol: {fileID: 8300000, guid: d48c1b13f6619434ebdaf876a95c3f12, type: 3}
+  fala2_Carol: {fileID: 8300000, guid: 4283ba3b704d38b44befbdcfeb274224, type: 3}
   fala1_Hal: {fileID: 8300000, guid: 04e6f4475ebb9304f84198192d03a26f, type: 3}
   ECG: {fileID: 185002946}
   playerAudio: {fileID: 185002942}
@@ -6145,7 +6146,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247447420}
-  m_LocalRotation: {x: 0.10844015, y: -0.08113453, z: 0.12649244, w: -0.98267883}
+  m_LocalRotation: {x: 0.10844015, y: -0.08113453, z: 0.12649249, w: -0.98267883}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

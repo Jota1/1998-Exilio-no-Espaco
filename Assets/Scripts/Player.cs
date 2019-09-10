@@ -29,11 +29,14 @@ public class Player : MonoBehaviour
     [SerializeField]
     AudioClip fala1_Carol;
     [SerializeField]
+    AudioClip fala2_Carol; 
+    [SerializeField]
     AudioClip fala1_Hal; 
     [SerializeField]
     AudioSource ECG; //EletroCardioGrama
     bool doneSpeak;
     bool doneSpeak2;
+    bool doneSpeak3; 
 
     [Header("Audio")]
     SoundController sound_controller;
@@ -179,6 +182,14 @@ public class Player : MonoBehaviour
         {
             playerAudio.PlayOneShot(fala1_Hal);
             doneSpeak2 = true;
+        }
+
+        yield return new WaitForSeconds(9f);
+
+        if (doneSpeak3 == false)
+        {
+            playerAudio.PlayOneShot(fala2_Carol); 
+            doneSpeak3 = true;
         }
     }
 
