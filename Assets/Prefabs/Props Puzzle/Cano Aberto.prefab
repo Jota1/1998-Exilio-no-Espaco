@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1833613563520423070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5582030716111500972}
+  - component: {fileID: 915047970466127787}
+  - component: {fileID: 525046826927624541}
+  m_Layer: 0
+  m_Name: Cano Aberto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5582030716111500972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833613563520423070}
+  m_LocalRotation: {x: -0, y: -0.40948546, z: -0, w: 0.9123166}
+  m_LocalPosition: {x: -4.1630707, y: -0.2968359, z: 0.86314774}
+  m_LocalScale: {x: 0.19999999, y: 0.2, z: 0.20559998}
+  m_Children:
+  - {fileID: 4159657193070938040}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &915047970466127787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833613563520423070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c308a01c5aaf0bf4cb14440ab13c35ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &525046826927624541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833613563520423070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4251711, y: 10.531945, z: 1.7562556}
+  m_Center: {x: -0.21258542, y: -2.2997499, z: 0.09968595}
+--- !u!64 &3631260207329328139
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4767389637135863865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7843526606762953986, guid: 7bf1c4954a9e8ff4e82897ae14262140, type: 3}
+--- !u!1001 &8989368350756695202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5582030716111500972}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_Name
+      value: Cano_com_fio
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02600182
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8259988
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32600114
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -48.345
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7bf1c4954a9e8ff4e82897ae14262140, type: 3}
+--- !u!4 &4159657193070938040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+    type: 3}
+  m_PrefabInstance: {fileID: 8989368350756695202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4767389637135863865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4690061960754922341, guid: 7bf1c4954a9e8ff4e82897ae14262140,
+    type: 3}
+  m_PrefabInstance: {fileID: 8989368350756695202}
+  m_PrefabAsset: {fileID: 0}
