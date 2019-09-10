@@ -8,9 +8,12 @@ public class Voltimeter : MonoBehaviour
     public Scrollbar voltimeter;
     public Scrollbar randomMark;
 
+    public GameObject voltimeterBar;
+
     public float randomValue;
 
     public bool back;
+    public bool completeMinigame;
 
     public int countRights;
     public float voltValue;
@@ -31,7 +34,8 @@ public class Voltimeter : MonoBehaviour
     {
         StoppingTiming();
 
-        UpdateTiming();
+        if(!completeMinigame)
+            UpdateTiming();
     }
 
     void StoppingTiming()
@@ -90,6 +94,8 @@ public class Voltimeter : MonoBehaviour
 
         if (countRights < 2)
             countRights++;
+        else
+            Complete();
 
         RandomizeMark();
     }
@@ -100,7 +106,23 @@ public class Voltimeter : MonoBehaviour
 
         if (countRights > 0)
             countRights--;
+        else
+            Fail();
 
         RandomizeMark();
+    }
+
+    void Complete()
+    {
+        voltimeterBar.SetActive(false);
+        countRights = 0;
+        completeMinigame = true;
+    }
+
+    void Fail()
+    {
+        voltimeterBar.SetActive(false);
+        countRights = 0;
+        completeMinigame = false;
     }
 }
