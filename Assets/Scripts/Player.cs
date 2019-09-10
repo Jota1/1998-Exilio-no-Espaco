@@ -28,6 +28,12 @@ public class Player : MonoBehaviour
     GameObject blackImage;
     [SerializeField]
     AudioClip fala1_Carol;
+    [SerializeField]
+    AudioClip fala1_Hal; 
+    [SerializeField]
+    AudioSource ECG; //EletroCardioGrama
+    bool doneSpeak;
+    bool doneSpeak2;
 
     [Header("Audio")]
     SoundController sound_controller;
@@ -41,15 +47,14 @@ public class Player : MonoBehaviour
     {        
         rb = GetComponent<Rigidbody>();
         state = States.grounded;
-        blackImage.SetActive(true);               
+        //inicio cinematic
+        blackImage.SetActive(true);
+        ECG.Play();
     }
 
     void Update()
     {
-        //StartCoroutine(StartGame());
-        //sound_controller.PlayDialogue(fala1_Carol);
-        if (Input.GetKeyDown (KeyCode.O))
-            playerAudio.PlayOneShot(fala1_Carol);
+        StartCoroutine(StartGame());            
 
         ChangeStates();     
     }
@@ -158,12 +163,23 @@ public class Player : MonoBehaviour
     #region IEnumerators
     //Cinematic Inicio do jogo
     IEnumerator StartGame ()
-    {
-        //tocando sons de glitch + eletrocardiograma
-        yield return new WaitForSeconds(2.5f);
-        sound_controller.PlayDialogue(fala1_Carol);
-        yield return new WaitForSeconds(1f);
-        blackImage.SetActive(false);
+    {        
+        yield return new WaitForSeconds(7f);
+        if (doneSpeak == false)
+        {
+            playerAudio.PlayOneShot(fala1_Carol);
+            doneSpeak = true;
+        }
+
+        yield return new WaitForSeconds(6f);
+        ECG.Stop();
+        blackImage.SetActive(false);        
+
+        if (doneSpeak2 == false)
+        {
+            playerAudio.PlayOneShot(fala1_Hal);
+            doneSpeak2 = true;
+        }
     }
 
     //mecanica de gravidade zero 
