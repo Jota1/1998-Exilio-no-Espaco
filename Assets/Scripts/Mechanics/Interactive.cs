@@ -4,27 +4,12 @@ using UnityEngine;
 
 public class Interactive : MonoBehaviour, IInteract
 {
-
     public bool canUse { get; set; }
-
-    public GameObject voltimeterObj;
-
-    public void UseItem(string item, string rightItem)
-    {
-        if(item == rightItem)
-        {
-            Debug.Log("Utiliza o item");
-        }
-    }
-
-    public void Voltimeter()
-    {
-        voltimeterObj.SetActive(true);
-    }
+    public bool completePuzzle;
 
     public void Interaction()
     {
-
+        Debug.Log("Interagiu");
     }
 
     private void OnTriggerEnter(Collider other)

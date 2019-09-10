@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IInteract
 {
+    public Transform handPlayer;
 
     public bool canUse { get; set; }
 
@@ -11,7 +12,7 @@ public class Item : MonoBehaviour, IInteract
     {
         if (canUse)
         {
-
+            transform.position = handPlayer.position;
         }
     }
 

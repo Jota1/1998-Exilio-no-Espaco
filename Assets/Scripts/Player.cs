@@ -163,6 +163,19 @@ public class Player : MonoBehaviour
         impact += dir.normalized * force / mass;
     }
 
+    private void OnTriggerStay(Collider other)
+    {                                                                         
+        GameObject objCol = other.gameObject;
+
+        if(objCol.tag == "Interagivel")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                objCol.GetComponent<IInteract>().Interaction();
+            }
+        }
+    }
+
     #region IEnumerators
     //Cinematic Inicio do jogo
     IEnumerator StartGame ()
