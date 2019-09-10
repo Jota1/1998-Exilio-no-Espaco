@@ -561,6 +561,9 @@ MonoBehaviour:
   gravityForce: 0.5
   torqueForcer: 0.005
   turnSpeedZeroG: 0.0003
+  blackImage: {fileID: 0}
+  fala1_Carol: {fileID: 8300000, guid: 8dc8fecc7d8398a4ba5a09b88df88afb, type: 3}
+  playerAudio: {fileID: 185002942}
 --- !u!54 &185002944
 Rigidbody:
   m_ObjectHideFlags: 0
