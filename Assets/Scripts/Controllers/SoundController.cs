@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-
-    private AudioSource playerAudio;
-
-    // Start is called before the first frame update
+    public AudioSource playerAudio;
+   
     void Awake()
     {
-        playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        //playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
     public void PlaySFX(AudioClip effect)
@@ -20,7 +18,7 @@ public class SoundController : MonoBehaviour
 
     public void PlayDialogue(AudioClip dialogue)
     {
-        playerAudio.Stop();
+        //playerAudio.Stop();
         playerAudio.PlayOneShot(dialogue);
     }
 }

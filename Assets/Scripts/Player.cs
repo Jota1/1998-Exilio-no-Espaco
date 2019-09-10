@@ -23,6 +23,16 @@ public class Player : MonoBehaviour
     public float torqueForcer; //força do torque no jogador quando ele esta se movimentando em gravidade zero
     public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero    
 
+    [Header("Start Game")]
+    [SerializeField]
+    GameObject blackImage;
+    [SerializeField]
+    AudioClip fala1_Carol;
+
+    [Header("Audio")]
+    SoundController sound_controller;
+    public AudioSource playerAudio;
+ 
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
     private Vector3 moveDirection = Vector3.zero;
@@ -31,10 +41,16 @@ public class Player : MonoBehaviour
     {        
         rb = GetComponent<Rigidbody>();
         state = States.grounded;
+        blackImage.SetActive(true);               
     }
 
     void Update()
-    {       
+    {
+        //StartCoroutine(StartGame());
+        //sound_controller.PlayDialogue(fala1_Carol);
+        if (Input.GetKeyDown (KeyCode.O))
+            playerAudio.PlayOneShot(fala1_Carol);
+
         ChangeStates();     
     }
 
@@ -140,6 +156,16 @@ public class Player : MonoBehaviour
     }
 
     #region IEnumerators
+    //Cinematic Inicio do jogo
+    IEnumerator StartGame ()
+    {
+        //tocando sons de glitch + eletrocardiograma
+        yield return new WaitForSeconds(2.5f);
+        sound_controller.PlayDialogue(fala1_Carol);
+        yield return new WaitForSeconds(1f);
+        blackImage.SetActive(false);
+    }
+
     //mecanica de gravidade zero 
     IEnumerator ZeroGravity()
     {

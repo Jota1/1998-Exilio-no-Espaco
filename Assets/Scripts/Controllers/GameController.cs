@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
     public GameObject gameMenu;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         gameMenu.SetActive(false);
     }
-
-    // Update is called once per frame
+   
     void Update()
     {
         UpdateMenu();
