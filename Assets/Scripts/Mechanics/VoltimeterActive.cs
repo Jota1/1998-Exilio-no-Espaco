@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Disjuntor : MonoBehaviour, IInteract
+public class VoltimeterActive : MonoBehaviour, IInteract
 {
-    public int numberOrderPuzzle;
+    private Voltimeter voltimeterController;
 
     public PuzzleController puzzleController { get; set; }
 
+    public int numberOrderPuzzle;
+
     void Awake()
     {
+        voltimeterController = FindObjectOfType<Voltimeter>();
         puzzleController = FindObjectOfType<PuzzleController>();
     }
 
@@ -17,15 +20,7 @@ public class Disjuntor : MonoBehaviour, IInteract
     {
         if(numberOrderPuzzle == puzzleController.puzzleProgression)
         {
-            puzzleController.puzzleProgression++;
-            Feedback();
-            puzzleController.FinishPuzzle();
+            voltimeterController.ActiveVoltimeter();
         }
-    }
-
-    void Feedback()
-    {
-        // Toca som
-        // Muda alavanca
     }
 }

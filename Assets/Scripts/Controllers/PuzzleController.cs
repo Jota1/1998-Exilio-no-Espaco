@@ -4,5 +4,41 @@ using UnityEngine;
 
 public class PuzzleController : MonoBehaviour
 {
-    public Interactive[] puzzle1;
+    // Número do Puzzle / Qual puzzle o jogador está ?
+    public int puzzleOrder;
+
+    // Quantidades dos passo a passo
+    public int puzzleNumber1;
+    public int puzzleNumber2;
+    public int puzzleNumber3;
+    public int puzzleNumber4;
+    public int puzzleNumber5;
+
+    // Passo a passo do jogador
+    public int puzzleProgression;
+
+
+    public void FinishPuzzle()
+    {
+        if(puzzleProgression == puzzleNumber1 && puzzleOrder == 1)
+        {
+            puzzleOrder++;
+        } 
+        else if (puzzleProgression == puzzleNumber2 && puzzleOrder == 2)
+        {
+            puzzleOrder++;
+        }
+        else if (puzzleProgression == puzzleNumber2 && puzzleOrder == 3)
+        {
+            puzzleOrder++;
+        }
+        else if (puzzleProgression == puzzleNumber2 && puzzleOrder == 4)
+        {
+            puzzleOrder++;
+        }
+        else if (puzzleProgression == puzzleNumber2 && puzzleOrder == 5)
+        {
+            puzzleOrder++;
+        }
+    }
 }

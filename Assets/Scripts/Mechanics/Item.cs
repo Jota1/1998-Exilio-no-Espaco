@@ -6,30 +6,23 @@ public class Item : MonoBehaviour, IInteract
 {
     public Transform handPlayer;
 
-    public bool canUse { get; set; }
+    public PuzzleController puzzleController { get; set; }
+
+    void Awake()
+    {
+        puzzleController = FindObjectOfType<PuzzleController>();
+    }
 
     public void Interaction()
     {
-        if (canUse)
-        {
-            transform.position = handPlayer.position;
-        }
+        transform.position = handPlayer.position;
+
+        Feedback();
     }
 
-    private void OnTriggerEnter(Collider other)
+    void Feedback()
     {
-        if(other.gameObject.tag == "Player")
-        {
-            canUse = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            canUse = false;
-        }
+        // Toca som
     }
 
 }

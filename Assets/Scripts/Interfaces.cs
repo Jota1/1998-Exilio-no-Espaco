@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IInteract
 {
-    bool canUse { get; set; }
+    PuzzleController puzzleController { get; set; }
 
     void Interaction();
 }

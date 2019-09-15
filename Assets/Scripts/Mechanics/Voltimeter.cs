@@ -24,6 +24,7 @@ public class Voltimeter : MonoBehaviour
     {
         RandomizeMark();
 
+        voltimeterBar.SetActive(false);
         countRights = 0;
         voltimeter.value = 0.025f;
         back = false;
@@ -40,7 +41,7 @@ public class Voltimeter : MonoBehaviour
 
     void StoppingTiming()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if(voltimeter.value >= randomMark.value - 0.02f  && voltimeter.value <= randomMark.value + 0.02f)
             {
@@ -114,6 +115,7 @@ public class Voltimeter : MonoBehaviour
 
     void Complete()
     {
+        FindObjectOfType<PuzzleController>().puzzleProgression++;
         voltimeterBar.SetActive(false);
         countRights = 0;
         completeMinigame = true;
@@ -123,6 +125,12 @@ public class Voltimeter : MonoBehaviour
     {
         voltimeterBar.SetActive(false);
         countRights = 0;
+        completeMinigame = false;
+    }
+
+    public void ActiveVoltimeter()
+    {
+        voltimeterBar.SetActive(true);
         completeMinigame = false;
     }
 }
