@@ -92,6 +92,7 @@ public class Player : MonoBehaviour
     //movimentação na gravidade zero
     void ZeroGravityMovement ()
     {
+
         //cima baixo movimento
         if (Input.GetKey(KeyCode.LeftShift) && state == States.floating)
         {
