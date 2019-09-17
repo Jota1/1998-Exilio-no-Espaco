@@ -91,8 +91,6 @@ public class Voltimeter : MonoBehaviour
 
     void RightTiming()
     {
-        Debug.Log("Acertou o Timing");
-
         if (countRights < 2)
             countRights++;
         else
@@ -103,8 +101,6 @@ public class Voltimeter : MonoBehaviour
 
     void WrongTiming()
     {
-        Debug.Log("Errou o Timing");
-
         if (countRights > 0)
             countRights--;
         else

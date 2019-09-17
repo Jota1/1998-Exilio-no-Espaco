@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public States state; //estados do jogador    
     Rigidbody rb;
 
+    public GameObject feedbackInteracao;
+
     [Header("Animations")]
     [SerializeField]
     Animator playerAnimator;
@@ -62,7 +64,7 @@ public class Player : MonoBehaviour
         ChangeStates();     
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         //atualizando fisica com base na gravidade / estados do jogador
         if (state == States.grounded)
@@ -164,6 +166,15 @@ public class Player : MonoBehaviour
         impact += dir.normalized * force / mass;
     }
 
+    #region Colisões
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Interagivel")
+        {
+            feedbackInteracao.SetActive(true);
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {                                                                         
         GameObject objCol = other.gameObject;
@@ -172,10 +183,20 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                feedbackInteracao.SetActive(false);
                 objCol.GetComponent<IInteract>().Interaction();
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Interagivel")
+        {
+            feedbackInteracao.SetActive(false);
+        }
+    }
+    #endregion
 
     #region IEnumerators
     //Cinematic Inicio do jogo
