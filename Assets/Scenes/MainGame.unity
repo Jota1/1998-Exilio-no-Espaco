@@ -702,7 +702,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &223583854
 Transform:
@@ -1136,7 +1136,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &309207467
 Transform:
@@ -1702,7 +1702,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &440502628
 Transform:
@@ -2646,7 +2646,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &638432292
 Transform:
@@ -5656,7 +5656,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061618147}
-  m_LocalRotation: {x: 0.06854437, y: -0.08988353, z: 0.08282447, w: -0.99013275}
+  m_LocalRotation: {x: 0.06854437, y: -0.089883514, z: 0.08282447, w: -0.99013275}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6878,7 +6878,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238626581}
-  m_LocalRotation: {x: -0.078318596, y: 0.095516525, z: 0.007538667, w: 0.9923135}
+  m_LocalRotation: {x: -0.07831859, y: 0.09551651, z: 0.0075386646, w: 0.9923135}
   m_LocalPosition: {x: 2.14, y: 0.85800004, z: -4.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -12832,6 +12832,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hall dos corredores V3
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 147209be59489764da3e00dc828d3123,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 147209be59489764da3e00dc828d3123,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12887,6 +12892,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8070234975061887051, guid: 147209be59489764da3e00dc828d3123,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 147209be59489764da3e00dc828d3123, type: 3}
 --- !u!4 &1999063687 stripped
@@ -12910,7 +12920,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2019616734
 Transform:
@@ -13289,7 +13299,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099624136}
-  m_LocalRotation: {x: 0.08915797, y: -0.0854872, z: 0.11093951, w: -0.98612136}
+  m_LocalRotation: {x: 0.08915796, y: -0.0854872, z: 0.11093951, w: -0.98612136}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
