@@ -6,6 +6,8 @@ public class Item : MonoBehaviour, IInteract
 {
     public Transform handPlayer;
 
+    public bool canHold;
+
     public PuzzleController puzzleController { get; set; }
 
     void Awake()
