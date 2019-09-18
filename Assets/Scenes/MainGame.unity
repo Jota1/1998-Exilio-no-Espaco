@@ -1930,6 +1930,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544127602}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &549718201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 549718202}
+  m_Layer: 0
+  m_Name: Hand Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &549718202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549718201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.222, y: 0.73, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 185002941}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554720846
 GameObject:
   m_ObjectHideFlags: 0
@@ -6423,7 +6453,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247447420}
-  m_LocalRotation: {x: 0.11202928, y: -0.08047076, z: 0.12631461, w: -0.9823536}
+  m_LocalRotation: {x: 0.112029284, y: -0.08047078, z: 0.12631461, w: -0.98235357}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7029,11 +7059,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fusivel (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8164079641319716949, guid: b67957ec844d10142810a11a430b49ab,
-        type: 3}
-      propertyPath: m_TagString
-      value: Interagivel
-      objectReference: {fileID: 0}
     - target: {fileID: 4905096613837409672, guid: b67957ec844d10142810a11a430b49ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7089,6 +7114,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6629732365998755635, guid: b67957ec844d10142810a11a430b49ab,
+        type: 3}
+      propertyPath: handPlayer
+      value: 
+      objectReference: {fileID: 549718202}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b67957ec844d10142810a11a430b49ab, type: 3}
 --- !u!4 &1433727433 stripped
@@ -12228,7 +12258,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099624136}
-  m_LocalRotation: {x: 0.09274368, y: -0.08475766, z: 0.11072469, w: -0.9858777}
+  m_LocalRotation: {x: 0.09274368, y: -0.084757656, z: 0.11072468, w: -0.98587775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
