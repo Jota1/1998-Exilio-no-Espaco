@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public States state; //estados do jogador    
     Rigidbody rb;
 
+    public Transform cam;
+
     public GameObject feedbackInteracao;
 
     [Header("Animations")]
@@ -79,15 +81,35 @@ public class Player : MonoBehaviour
     //movimentação basica do jogador 
     void BasicMovement()
     {
-        playerAnimator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Vertical")));
+        playerAnimator.SetFloat("Speed", Mathf.Abs(moveDirection.magnitude));
 
+        /*
         transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed, 0);
 
         if (Input.GetKey(KeyCode.W))
             transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * speed;
         else if (Input.GetKey(KeyCode.S))
             transform.position -= transform.TransformDirection(Vector3.forward) * Time.deltaTime * speed;
-   
+        */
+
+        moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        moveDirection = Vector2.ClampMagnitude(moveDirection, 1);
+
+        Vector3 camF = cam.forward;
+        Vector3 camR = cam.right;
+
+        camF.y = 0;
+        camR.y = 0;
+        camF = camF.normalized;
+        camR = camR.normalized;
+
+        if (moveDirection.magnitude > 0)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(camF * moveDirection.y + camR * moveDirection.x);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5 * Time.deltaTime);
+        }
+
+        transform.position += (camF * moveDirection.y + camR * moveDirection.x) * Time.deltaTime * speed;
 
     }   
 
