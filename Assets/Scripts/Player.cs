@@ -28,8 +28,8 @@ public class Player : MonoBehaviour
     public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero    
 
     [Header("Start Game")]
-    [SerializeField]
-    GameObject blackImage;
+    //[SerializeField]
+    //GameObject blackImage;
     [SerializeField]
     AudioClip fala1_Carol;
     [SerializeField]
@@ -55,14 +55,13 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         state = States.grounded;
         //inicio cinematic
-        blackImage.SetActive(true);
+        //blackImage.SetActive(true);
         ECG.Play();
     }
 
     void Update()
     {
-        StartCoroutine(StartGame());            
-
+        StartCoroutine(StartGame());     
         ChangeStates();     
     }
 
@@ -110,7 +109,6 @@ public class Player : MonoBehaviour
         }
 
         transform.position += (camF * moveDirection.y + camR * moveDirection.x) * Time.deltaTime * speed;
-
     }   
 
     //movimentação na gravidade zero
@@ -233,7 +231,7 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(6f);
         ECG.Stop();
-        blackImage.SetActive(false);        
+        //blackImage.SetActive(false);        
 
         if (doneSpeak2 == false)
         {
