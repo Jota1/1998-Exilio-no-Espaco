@@ -82,15 +82,6 @@ public class Player : MonoBehaviour
     {
         playerAnimator.SetFloat("Speed", Mathf.Abs(moveDirection.magnitude));
 
-        /*
-        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed, 0);
-
-        if (Input.GetKey(KeyCode.W))
-            transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * speed;
-        else if (Input.GetKey(KeyCode.S))
-            transform.position -= transform.TransformDirection(Vector3.forward) * Time.deltaTime * speed;
-        */
-
         moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         moveDirection = Vector2.ClampMagnitude(moveDirection, 1);
 
