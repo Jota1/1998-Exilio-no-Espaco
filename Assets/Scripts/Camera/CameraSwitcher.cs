@@ -8,6 +8,9 @@ public class CameraSwitcher : MonoBehaviour
     GameObject firstCam;
     [SerializeField]
     GameObject thirdCam;
+    [SerializeField]
+    GameObject trueThirdCam;
+
     public static int camMode; // 0 = thirdPerson / 1 = firstPerson
 
     void Start()
@@ -26,11 +29,15 @@ public class CameraSwitcher : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && camMode == 0)
         {
-            camMode = 1;                
+            camMode = 1;
+
+            FindObjectOfType<Player>().cam = firstCam.transform;
         }
         else if (Input.GetKeyDown(KeyCode.C) && camMode == 1)
         {
             camMode = 0;
+
+            FindObjectOfType<Player>().cam = trueThirdCam.transform;
         }
 
         StartCoroutine(SwitchCamEnum());      
