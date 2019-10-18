@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
 
     public Transform cam;
 
-    public GameObject feedbackInteracao;
+    [Header("Item")]
+    public Item item;
 
     [Header("Animations")]
     [SerializeField]
@@ -180,10 +181,7 @@ public class Player : MonoBehaviour
     #region Colisões
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Interagivel")
-        {
-            feedbackInteracao.SetActive(true);
-        }
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -194,18 +192,15 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                feedbackInteracao.SetActive(false);
                 objCol.GetComponent<IInteract>().Interaction();
+                item = GetComponent<Item>();
             }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Interagivel")
-        {
-            feedbackInteracao.SetActive(false);
-        }
+   
     }
     #endregion
 
