@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IInteract
 {
-    public Transform handPlayer;
+    public string nameItem;
 
-    public bool canHold;
+    public bool isHolding;
+
+    public Transform handPosition;
 
     public PuzzleController puzzleController { get; set; }
 
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
+
+        isHolding = false;
+    }
+
+    void Update()
+    {
+
+        if (isHolding)
+            transform.position = handPosition.position;
+
     }
 
     public void Interaction()
     {
-        transform.position = handPlayer.position;
+        if(!isHolding)
+        isHolding = true;
 
         Feedback();
     }
