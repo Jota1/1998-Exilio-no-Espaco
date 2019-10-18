@@ -25,26 +25,7 @@ public class Player : MonoBehaviour
     public float turnSpeed; //velocidade que o jogador gira
     public float gravityForce; //impacto da gravidade quando desligada   
     public float torqueForcer; //força do torque no jogador quando ele esta se movimentando em gravidade zero
-    public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero    
-
-    [Header("Start Game")]
-    //[SerializeField]
-    //GameObject blackImage;
-    [SerializeField]
-    AudioClip fala1_Carol;
-    [SerializeField]
-    AudioClip fala2_Carol; 
-    [SerializeField]
-    AudioClip fala1_Hal; 
-    [SerializeField]
-    AudioSource ECG; //EletroCardioGrama
-    bool doneSpeak;
-    bool doneSpeak2;
-    bool doneSpeak3; 
-
-    [Header("Audio")]
-    SoundController sound_controller;
-    public AudioSource playerAudio;
+    public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero      
  
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
@@ -53,15 +34,11 @@ public class Player : MonoBehaviour
     void Start()
     {        
         rb = GetComponent<Rigidbody>();
-        state = States.grounded;
-        //inicio cinematic
-        //blackImage.SetActive(true);
-        ECG.Play();
+        state = States.grounded;            
     }
 
     void Update()
-    {
-        StartCoroutine(StartGame());     
+    {       
         ChangeStates();     
     }
 
@@ -210,35 +187,6 @@ public class Player : MonoBehaviour
     #endregion
 
     #region IEnumerators
-    //Cinematic Inicio do jogo
-    IEnumerator StartGame ()
-    {        
-        yield return new WaitForSeconds(7f);
-        if (doneSpeak == false)
-        {
-            playerAudio.PlayOneShot(fala1_Carol);
-            doneSpeak = true;
-        }
-
-        yield return new WaitForSeconds(6f);
-        ECG.Stop();
-        //blackImage.SetActive(false);        
-
-        if (doneSpeak2 == false)
-        {
-            playerAudio.PlayOneShot(fala1_Hal);
-            doneSpeak2 = true;
-        }
-
-        yield return new WaitForSeconds(9f);
-
-        if (doneSpeak3 == false)
-        {
-            playerAudio.PlayOneShot(fala2_Carol); 
-            doneSpeak3 = true;
-        }
-    }
-
     //mecanica de gravidade zero 
     IEnumerator ZeroGravity()
     {

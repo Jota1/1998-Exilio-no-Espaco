@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     private int index;
     public float typingSpeed;
     public Animator dialogueText_Animator;
+    public static int dialoguecounter;
 
     //[Header("Voice Dialogue")]
     //public AudioClip[] voiceClips;
@@ -19,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(Type());
+        dialoguecounter = 0;
     }
 
     IEnumerator Type ()
@@ -32,11 +34,19 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        //TESTE
-        if (Input.GetKeyDown(KeyCode.Y))
+        ////TESTE
+        //if (Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    StartCoroutine(AnimationControl_DialogueBox());
+        //}            
+
+        if (GameController.eventCounter == 0)
         {
-            StartCoroutine(AnimationControl_DialogueBox());
-        }            
+            if (dialoguecounter == 1) // trigar em algum lugar do game controller para mudar o dialogue counter
+            {
+                StartCoroutine(AnimationControl_DialogueBox());
+            }
+        }
     }
 
     IEnumerator AnimationControl_DialogueBox ()   //colocar ESTE Ienumerator para mostrar a próxima sentença (definir dialogos de forma linear)
