@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header ("Text Dialogue")]
     public Text dialogue_Text;
     public string[] setences;
     private int index;
     public float typingSpeed;
     public Animator dialogueText_Animator;
+
+    //[Header("Voice Dialogue")]
+    //public AudioClip[] voiceClips;
+    //public AudioSource voiceAudioSource;
 
     void Start()
     {
@@ -34,9 +39,9 @@ public class DialogueManager : MonoBehaviour
         }            
     }
 
-    IEnumerator AnimationControl_DialogueBox () //colocar ESTE Ienumerator para mostrar a próxima sentença (definir dialogos de forma linear)
+    IEnumerator AnimationControl_DialogueBox ()   //colocar ESTE Ienumerator para mostrar a próxima sentença (definir dialogos de forma linear)
     {
-        dialogueText_Animator.SetTrigger("Open");   //obs: colocar a primeira sentença como vazia (sem nenhuma palavra)
+        dialogueText_Animator.SetTrigger("Open"); //obs: colocar a primeira sentença como vazia (sem nenhuma palavra)
         yield return new WaitForSeconds(0.7f);
         NextSentence();
         yield return new WaitForSeconds(3f);
