@@ -158,7 +158,13 @@ public class Player : MonoBehaviour
     #region Colisões
     private void OnTriggerEnter(Collider other)
     {
+        GameObject objCol = other.gameObject;
 
+        if (objCol.tag == "PseudoEscada")
+        {
+            //toca animação subindo escada
+            Debug.Log("ESCADA");
+        }
     }
 
     private void OnTriggerStay(Collider other)
