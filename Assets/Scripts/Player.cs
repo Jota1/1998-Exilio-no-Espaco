@@ -87,31 +87,37 @@ public class Player : MonoBehaviour
         //cima baixo movimento
         if (Input.GetKey(KeyCode.LeftShift) && state == States.floating)
         {
+            rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.up * torqueForcer, ForceMode.Impulse);
         }
 
         else if (Input.GetKey(KeyCode.LeftControl) && state == States.floating)
         {
+            rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.down * torqueForcer, ForceMode.Impulse);
         }
 
         //frente tras movimento
         if (Input.GetKey(KeyCode.W) && state == States.floating)
-        {            
+        {
+            rb.velocity = Vector3.zero;
             rb.AddForce(transform.TransformDirection(Vector3.forward) * torqueForcer, ForceMode.Impulse);            
         }
         else if (Input.GetKey(KeyCode.S) && state == States.floating)
         {
+            rb.velocity = Vector3.zero;
             rb.AddForce(transform.TransformDirection(Vector3.back) * torqueForcer, ForceMode.Impulse);
         }
        
         //rotação movimento 
         if (Input.GetKey(KeyCode.A) && state == States.floating)
         {
+            rb.velocity = Vector3.zero;
             rb.AddTorque(Vector3.down * turnSpeedZeroG, ForceMode.Impulse);
         }
         else if (Input.GetKey(KeyCode.D) && state == States.floating)
         {
+            rb.velocity = Vector3.zero;
             rb.AddTorque(Vector3.up * turnSpeedZeroG, ForceMode.Impulse);
         }
     }
@@ -173,7 +179,7 @@ public class Player : MonoBehaviour
 
         if(objCol.tag == "Interagivel")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 objCol.GetComponent<IInteract>().Interaction();
                 item = GetComponent<Item>();
