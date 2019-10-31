@@ -7,6 +7,7 @@ TagManager:
   - ground
   - Interagivel
   - PseudoEscada
+  - PseudoPorta
   layers:
   - Default
   - TransparentFX
