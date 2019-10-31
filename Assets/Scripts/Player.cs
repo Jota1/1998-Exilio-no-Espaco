@@ -30,7 +30,8 @@ public class Player : MonoBehaviour
 
     [Header("TP")] //temporario 
     public Transform checkPoint_SalaP2;
- 
+    public Transform checkpoint_SalaGravidade;
+
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
     private Vector3 moveDirection = Vector3.zero;
@@ -181,6 +182,14 @@ public class Player : MonoBehaviour
             transform.rotation = checkPoint_SalaP2.rotation;
 
             Debug.Log("Porta Para Sala P2");
+        }
+
+        if (objCol.tag == "PseudoPortaP2")
+        {
+            transform.position = checkpoint_SalaGravidade.position;
+            transform.rotation = checkpoint_SalaGravidade.rotation;
+
+            Debug.Log("Porta Para Sala Gravidade");
         }
     }
 
