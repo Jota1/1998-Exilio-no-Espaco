@@ -27,6 +27,9 @@ public class Player : MonoBehaviour
     public float gravityForce; //impacto da gravidade quando desligada   
     public float torqueForcer; //força do torque no jogador quando ele esta se movimentando em gravidade zero
     public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero      
+
+    [Header("TP")] //temporario 
+    public Transform checkPoint_SalaP2;
  
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
@@ -170,6 +173,14 @@ public class Player : MonoBehaviour
         {
             //toca animação subindo escada
             Debug.Log("ESCADA");
+        }
+
+        if (objCol.tag == "PseudoPorta")
+        {
+            transform.position = checkPoint_SalaP2.position;
+            transform.rotation = checkPoint_SalaP2.rotation;
+
+            Debug.Log("Porta Para Sala P2");
         }
     }
 
