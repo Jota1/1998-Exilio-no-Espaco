@@ -8,13 +8,15 @@ public class Inventory : MonoBehaviour
 
     public bool CheckCondition(string condition)
     {
+        string item = "";
+        
         for(int i = 0; i < itemList.Count; i++)
         {
-            if (itemList[i].nameItem == condition)
-                return true;                
-            else
-                return false;  
+            if (item == condition)
+                item = condition;
         }
+
+        return item == condition;
     }
 
 }

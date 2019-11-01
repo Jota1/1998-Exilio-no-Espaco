@@ -13,16 +13,17 @@ public class Item : MonoBehaviour, IInteract
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
-
     }
 
     public void Interaction()
     {
 
+        if (FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "Not condition")
+        {
+            FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
 
-        FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
-
-        Feedback();
+            Feedback();
+        }
     }
 
     void Feedback()
