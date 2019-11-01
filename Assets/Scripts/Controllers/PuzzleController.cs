@@ -14,8 +14,6 @@ public class PuzzleController : MonoBehaviour
     public int puzzleNumber1;
     public int puzzleNumber2;
     public int puzzleNumber3;
-    public int puzzleNumber4;
-    public int puzzleNumber5;
 
     // Passo a passo do jogador
     public int puzzleProgression;
@@ -44,13 +42,6 @@ public class PuzzleController : MonoBehaviour
         {
             puzzleOrder++;
         }
-        else if (puzzleProgression == puzzleNumber2 && puzzleOrder == 4)
-        {
-            puzzleOrder++;
-        }
-        else if (puzzleProgression == puzzleNumber2 && puzzleOrder == 5)
-        {
-            puzzleOrder++;
-        }
+ 
     }
 }
