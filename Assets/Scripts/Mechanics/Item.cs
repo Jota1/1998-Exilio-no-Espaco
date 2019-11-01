@@ -19,18 +19,9 @@ public class Item : MonoBehaviour, IInteract
         isHolding = false;
     }
 
-    void Update()
-    {
-
-        if (isHolding)
-            transform.position = handPosition.position;
-
-    }
-
     public void Interaction()
     {
-        if(!isHolding)
-        isHolding = true;
+        
 
         Feedback();
     }
