@@ -6,22 +6,18 @@ public class Item : MonoBehaviour, IInteract
 {
     public string nameItem;
 
-    public bool isHolding;
-
-    public Transform handPosition;
+    public string condition;
 
     public PuzzleController puzzleController { get; set; }
 
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
-
-        isHolding = false;
     }
 
     public void Interaction()
     {
-        
+        FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
 
         Feedback();
     }
