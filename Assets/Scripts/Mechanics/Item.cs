@@ -13,10 +13,13 @@ public class Item : MonoBehaviour, IInteract
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
+
     }
 
     public void Interaction()
     {
+
+
         FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
 
         Feedback();
