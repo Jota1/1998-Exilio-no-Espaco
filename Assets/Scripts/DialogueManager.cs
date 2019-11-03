@@ -21,6 +21,8 @@ public class DialogueManager : MonoBehaviour
     {
         StartCoroutine(Type());
         dialoguecounter = 0;
+
+        Invoke("First_Dialogue", 6f);
     }
 
     IEnumerator Type ()
@@ -34,12 +36,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        ////TESTE
-        //if (Input.GetKeyDown(KeyCode.Y))
-        //{
-        //    StartCoroutine(AnimationControl_DialogueBox());
-        //}            
-
         if (GameController.eventCounter == 0)
         {
             if (dialoguecounter == 1) // trigar em algum lugar do game controller para mudar o dialogue counter
@@ -47,6 +43,11 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(AnimationControl_DialogueBox());
             }
         }
+    }
+
+    void First_Dialogue ()
+    {
+        dialoguecounter = 1;
     }
 
     IEnumerator AnimationControl_DialogueBox ()   //colocar ESTE Ienumerator para mostrar a próxima sentença (definir dialogos de forma linear)

@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
     bool doneSpeak2;
     bool doneSpeak3;
 
+    bool firstDialogueTuto; //primeira fala do tutorial
+
     [Header("Audio")]
     SoundController sound_controller;
     public AudioSource playerAudio;
@@ -43,6 +45,9 @@ public class GameController : MonoBehaviour
         UpdateMenu();
 
         StartCoroutine(StartGame());
+
+        //if (firstDialogueTuto)
+            //DialogueManager.dialoguecounter = 1;
     }
 
     void UpdateMenu()
@@ -75,8 +80,9 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(6f);
         ECG.Stop();
-            blackImage.SetActive(false);        
-
+        blackImage.SetActive(false);
+        firstDialogueTuto = true;
+        
         if (doneSpeak2 == false)
         {
             playerAudio.PlayOneShot(fala1_Hal);
