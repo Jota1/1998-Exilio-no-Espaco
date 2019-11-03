@@ -6,6 +6,7 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> itemList = new List<Item>();
 
+    // Verifica se tem o item no inventário
     public bool CheckCondition(string condition)
     {
         string item = "";

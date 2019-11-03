@@ -13,6 +13,8 @@ public class Item : MonoBehaviour, IInteract
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
+
+        // Alteração
     }
 
     public void Interaction()
