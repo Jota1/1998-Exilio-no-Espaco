@@ -13,9 +13,6 @@ public class Player : MonoBehaviour
 
     public Transform cam;
 
-    [Header("Item")]
-    public Item item;
-
     [Header("Animations")]
     [SerializeField]
     Animator playerAnimator;
@@ -202,7 +199,6 @@ public class Player : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 objCol.GetComponent<IInteract>().Interaction();
-                item = GetComponent<Item>();
             }
         }
     }

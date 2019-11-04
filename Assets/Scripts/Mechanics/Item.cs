@@ -20,7 +20,7 @@ public class Item : MonoBehaviour, IInteract
     public void Interaction()
     {
 
-        if (FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "Not condition")
+        if (FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "")
         {
             FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
 
