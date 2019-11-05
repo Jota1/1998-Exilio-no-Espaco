@@ -22,7 +22,7 @@ public class CameraSwitcher : MonoBehaviour
     {
         SwitchCam();
 
-        Debug.Log(camMode);
+        //Debug.Log(camMode);
     }
 
     void SwitchCam ()

@@ -17,12 +17,14 @@ public class DialogueManager : MonoBehaviour
     //public AudioClip[] voiceClips;
     //public AudioSource voiceAudioSource;
 
+    public static bool openDialogueBox;
+
     void Start()
     {
         StartCoroutine(Type());
         dialoguecounter = 0;
 
-        Invoke("First_Dialogue", 6f);
+        //Invoke("First_Dialogue", 6f);
     }
 
     IEnumerator Type ()
@@ -43,11 +45,22 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(AnimationControl_DialogueBox());
             }
         }
+
+        if (openDialogueBox)
+            dialogueText_Animator.SetTrigger("Open");
+        else if (!openDialogueBox) { dialogueText_Animator.SetTrigger("Close"); }
+
+        Debug.Log("open dialogue box" + openDialogueBox);
     }
 
     void First_Dialogue ()
     {
         dialoguecounter = 1;
+    }
+
+    public void OpenDialogueBox() 
+    {
+        StartCoroutine(Open_DialogueBox());
     }
 
     IEnumerator AnimationControl_DialogueBox ()   //colocar ESTE Ienumerator para mostrar a próxima sentença (definir dialogos de forma linear)
@@ -59,6 +72,13 @@ public class DialogueManager : MonoBehaviour
         dialogueText_Animator.SetTrigger("Close");
         yield return new WaitForSeconds(0.5f);
         dialogue_Text.text = "";
+    }
+
+    IEnumerator Open_DialogueBox ()
+    {
+        dialogueText_Animator.SetTrigger("Open");
+        yield return new WaitForSeconds(4f);
+        dialogueText_Animator.SetTrigger("Close");
     }
 
     public void NextSentence () 

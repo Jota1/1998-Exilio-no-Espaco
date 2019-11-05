@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     AudioSource ECG; //EletroCardioGrama
     bool doneSpeak;
     bool doneSpeak2;
-    bool doneSpeak3;
+    public static bool doneSpeak3;
 
     bool firstDialogueTuto; //primeira fala do tutorial
 

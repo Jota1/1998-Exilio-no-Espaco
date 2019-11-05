@@ -1,23 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
     int wasdCounter; //contando o tempo que o jogador ficou andando
-    bool tutoMovFinalizado;
+    public static bool tutoMovFinalizado;
 
     bool firstGravityOn; //identificando a primeira vez q ligou a gravidade 
 
+    [Header("Dialogos Tutorial")] 
+    public Text dialogo_TXT_Tutorial;
+    //public GameObject hal_Icon;
+
     void Start()
     {
-        wasdCounter = 0;        
+        wasdCounter = 0;
+        dialogo_TXT_Tutorial.text = "Use WASD para se movimentar";
     }
     
     void Update()
     {
         TutoMovimentação();
         TutoGravity();
+
+        if (/*!tutoMovFinalizado &&*/ GameController.doneSpeak3)
+        {
+            DialogueManager.openDialogueBox = true;            
+        }
+        //if (DialogueManager.openDialogueBox)
+        //{
+        //    Invoke("CloseDialogueBox", 4f);
+        //}
+    }
+
+    void CloseDialogueBox ()
+    {
+        DialogueManager.openDialogueBox = false;
     }
 
     void TutoMovimentação ()
@@ -30,6 +50,8 @@ public class Tutorial : MonoBehaviour
         if (wasdCounter >= 400)
         {
             tutoMovFinalizado = true;
+            dialogo_TXT_Tutorial.text = "Segure 'espaço' e clique em 'Desligar Gravidade'";
+
             Debug.Log("Tuto mov finalizado");
         }
     }
