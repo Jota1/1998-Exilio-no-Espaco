@@ -37,9 +37,9 @@ public class ReceiveItem : MonoBehaviour, IInteract
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
-        {
-            itemReceive = col.gameObject.GetComponent<Player>().item;
-        }
+        //if(col.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        //{
+        //    itemReceive = col.gameObject.GetComponent<Player>().item;
+        //}
     }
 }
