@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     public float gravityForce; //impacto da gravidade quando desligada   
     public float torqueForcer; //força do torque no jogador quando ele esta se movimentando em gravidade zero
     public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero      
+    public float m_MovementSmoothing; // Suavização da velocidade
+    private Vector3 m_Velocity = Vector3.zero; // Valor de referência pra movimentação
 
     [Header("TP")] //temporario 
     public Transform checkPoint_SalaP2;
@@ -88,8 +90,8 @@ public class Player : MonoBehaviour
         //cima baixo movimento
         if (Input.GetKey(KeyCode.LeftShift) && state == States.floating)
         {
-            rb.velocity = Vector3.zero;
-            rb.AddForce(Vector3.up * torqueForcer, ForceMode.Impulse);
+            Vector3 targetVelocity = new Vector3(rb.velocity.x, speed * Time.deltaTime, rb.velocity.z);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
 
         else if (Input.GetKey(KeyCode.LeftControl) && state == States.floating)
@@ -101,8 +103,8 @@ public class Player : MonoBehaviour
         //frente tras movimento
         if (Input.GetKey(KeyCode.W) && state == States.floating)
         {
-            rb.velocity = Vector3.zero;
-            rb.AddForce(transform.TransformDirection(Vector3.forward) * torqueForcer, ForceMode.Impulse);            
+            Vector3 targetVelocity = new Vector3(rb.velocity.x, rb.velocity.y, speed * Time.deltaTime);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
         else if (Input.GetKey(KeyCode.S) && state == States.floating)
         {
