@@ -20,4 +20,9 @@ public class Inventory : MonoBehaviour
         return item == condition;
     }
 
+    public  void ClearList()
+    {
+        itemList.Clear();
+    }
+
 }

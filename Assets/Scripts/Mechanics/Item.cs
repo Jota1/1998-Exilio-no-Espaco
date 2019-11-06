@@ -8,6 +8,10 @@ public class Item : MonoBehaviour, IInteract
 
     public string condition;
 
+    public int puzzleNumber;
+
+    public bool disappear;
+
     public PuzzleController puzzleController { get; set; }
 
     void Awake()
@@ -20,9 +24,14 @@ public class Item : MonoBehaviour, IInteract
     public void Interaction()
     {
 
-        if (FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "")
+        if ((FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "") && puzzleNumber == 1)
         {
             FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
+
+            if (disappear)
+            {
+                gameObject.SetActive(false);
+            }
 
             Feedback();
         }

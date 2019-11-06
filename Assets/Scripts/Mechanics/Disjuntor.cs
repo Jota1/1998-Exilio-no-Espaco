@@ -17,9 +17,6 @@ public class Disjuntor : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(!forceRestore)
-            
-
         if(forceRestore && FindObjectOfType<Inventory>().CheckCondition("Fusivel 1") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 2") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 3"))
             puzzleController.FinishPuzzle1();
 
