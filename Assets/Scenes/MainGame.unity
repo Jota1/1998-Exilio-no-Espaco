@@ -8086,7 +8086,6 @@ GameObject:
   - component: {fileID: 847481025}
   - component: {fileID: 847481028}
   - component: {fileID: 847481027}
-  - component: {fileID: 847481026}
   m_Layer: 0
   m_Name: Disjuntor
   m_TagString: Untagged
@@ -8108,19 +8107,6 @@ Transform:
   m_Father: {fileID: 315485649}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &847481026
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847481024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &847481027
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13280,7 +13266,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.95, y: 0, z: 0.83}
 --- !u!114 &1359694632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15760,7 +15746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640310886}
   m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 0, z: 0.15}
+  m_LocalPosition: {x: 1.02, y: 0, z: 0.86}
   m_LocalScale: {x: 1, y: 1, z: 0.35039}
   m_Children: []
   m_Father: {fileID: 1359694630}
