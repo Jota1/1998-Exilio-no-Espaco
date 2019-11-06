@@ -3095,7 +3095,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268250521}
-  m_LocalRotation: {x: 0.040292792, y: -2.7890772e-14, z: 6.916402e-13, w: 0.99918795}
+  m_LocalRotation: {x: 0.040292792, y: -2.7873813e-14, z: 6.9121965e-13, w: 0.99918795}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3865,6 +3865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0580f478f556d4a8df9bd0112f06e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1001 &321580030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5004,6 +5006,9 @@ MonoBehaviour:
   condition: Computador
   puzzleNumber: 3
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &411840578
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,6 +6103,9 @@ MonoBehaviour:
   condition: 
   puzzleNumber: 3
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &515964255
 GameObject:
   m_ObjectHideFlags: 0
@@ -9292,7 +9300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823231603}
-  m_LocalRotation: {x: 0.033063695, y: 2.3152676e-15, z: -6.9986206e-14, w: 0.99945325}
+  m_LocalRotation: {x: 0.033063695, y: 2.323225e-15, z: -7.022672e-14, w: 0.99945325}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9733,6 +9741,9 @@ MonoBehaviour:
   condition: asashaiush
   puzzleNumber: 0
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1001 &854885946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10250,6 +10261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0580f478f556d4a8df9bd0112f06e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1001 &888680718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12598,6 +12611,9 @@ MonoBehaviour:
   condition: 
   puzzleNumber: 3
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &1035109789
 GameObject:
   m_ObjectHideFlags: 0
@@ -13491,6 +13507,9 @@ MonoBehaviour:
   condition: Chaves
   puzzleNumber: 3
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &1100029585
 GameObject:
   m_ObjectHideFlags: 0
@@ -17938,6 +17957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554866917}
   - component: {fileID: 1554866918}
+  - component: {fileID: 1554866919}
   m_Layer: 0
   m_Name: CM Third Person
   m_TagString: Untagged
@@ -18061,6 +18081,36 @@ MonoBehaviour:
   - {fileID: 2001908999}
   - {fileID: 268250523}
   - {fileID: 823231605}
+--- !u!114 &1554866919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554866916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: Player
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+  m_OptimalTargetDistance: 0
 --- !u!1 &1562300874
 GameObject:
   m_ObjectHideFlags: 0
@@ -20767,6 +20817,9 @@ MonoBehaviour:
   condition: Ferramenta
   puzzleNumber: 1
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1001 &1748237253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22494,6 +22547,9 @@ MonoBehaviour:
   condition: 
   puzzleNumber: 1
   disappear: 1
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &1885459993
 GameObject:
   m_ObjectHideFlags: 0
@@ -24780,8 +24836,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.10726211, y: 3.6909008e-16, z: -2.4628704e-14, w: 0.9942308}
-  m_LocalPosition: {x: 0, y: 0.14639807, z: 0.116217375}
+  m_LocalRotation: {x: 0.061188728, y: -3.7277374e-15, z: -2.4310576e-14, w: 0.99812627}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 861425628}
@@ -25421,6 +25477,9 @@ MonoBehaviour:
   condition: 
   puzzleNumber: 1
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &2039914740
 GameObject:
   m_ObjectHideFlags: 0
@@ -26791,6 +26850,9 @@ MonoBehaviour:
   condition: Cartao
   puzzleNumber: 3
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1001 &310467162768294395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28021,6 +28083,9 @@ MonoBehaviour:
   condition: 
   puzzleNumber: 2
   disappear: 1
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!1 &4581150985485430816
 GameObject:
   m_ObjectHideFlags: 0
@@ -28073,6 +28138,9 @@ MonoBehaviour:
   condition: Ferramenta
   puzzleNumber: 2
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!65 &4581150985485430846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28149,6 +28217,9 @@ MonoBehaviour:
   condition: 
   puzzleNumber: 2
   disappear: 1
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!23 &4581150985503282844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28355,6 +28426,9 @@ MonoBehaviour:
   condition: Chaves
   puzzleNumber: 2
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!33 &4581150985919157376
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28611,6 +28685,9 @@ MonoBehaviour:
   condition: Codigo
   puzzleNumber: 2
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!4 &4581150986732935530
 Transform:
   m_ObjectHideFlags: 0
@@ -28673,6 +28750,9 @@ MonoBehaviour:
   condition: Painel
   puzzleNumber: 2
   disappear: 0
+  colectItem: 0
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
 --- !u!23 &4581150986811408722
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30027,3 +30107,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0580f478f556d4a8df9bd0112f06e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positiveFeedback: {fileID: 0}
+  negativeFeedback: {fileID: 0}
