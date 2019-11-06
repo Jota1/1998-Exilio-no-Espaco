@@ -215,6 +215,9 @@ public class Player : MonoBehaviour
     //mecanica de gravidade zero 
     IEnumerator ZeroGravity()
     {
+        //comando para setar o tutorial
+        Tutorial.tutoGrvtFinalizado = true;
+
         state = States.floating;
         rb.useGravity = false;
         gravity = -0.0001f;

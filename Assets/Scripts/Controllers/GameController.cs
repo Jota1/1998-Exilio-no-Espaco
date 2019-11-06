@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     [SerializeField]
     AudioClip fala1_Hal;
     [SerializeField]
+    AudioClip fala2_Hal; 
+    [SerializeField]
     AudioSource ECG; //EletroCardioGrama
     bool doneSpeak;
     bool doneSpeak2;
@@ -72,6 +74,12 @@ public class GameController : MonoBehaviour
     IEnumerator StartGame() // refazer esquema de falas por som atraves do dialogue manager
     {
         yield return new WaitForSeconds(7f);
+        if (doneSpeak2 == false)
+        {
+            playerAudio.PlayOneShot(fala1_Hal);
+            doneSpeak2 = true;
+        }
+        yield return new WaitForSeconds(5f);
         if (doneSpeak == false)
         {
             playerAudio.PlayOneShot(fala1_Carol);
@@ -85,7 +93,7 @@ public class GameController : MonoBehaviour
         
         if (doneSpeak2 == false)
         {
-            playerAudio.PlayOneShot(fala1_Hal);
+            playerAudio.PlayOneShot(fala2_Hal);
             doneSpeak2 = true;
         }
 
