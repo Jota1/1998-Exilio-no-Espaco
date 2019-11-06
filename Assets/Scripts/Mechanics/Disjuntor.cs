@@ -8,6 +8,9 @@ public class Disjuntor : MonoBehaviour, IInteract
 
     public static bool forceRestore;
 
+    public AudioClip positiveFeedback;
+    public AudioClip negativeFeedback;
+
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
@@ -17,15 +20,18 @@ public class Disjuntor : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(forceRestore && FindObjectOfType<Inventory>().CheckCondition("Fusivel 1") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 2") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 3"))
+        if (forceRestore && FindObjectOfType<Inventory>().CheckCondition("Fusivel 1") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 2") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 3"))
+        {
+            Feedback(positiveFeedback);
             puzzleController.FinishPuzzle1();
+        }
 
-        Feedback();
+        Feedback(negativeFeedback);
     }
 
-    void Feedback()
+    void Feedback(AudioClip feedback)
     {
         // Toca som
-        // Muda alavanca
+        FindObjectOfType<SoundController>().PlaySFX(feedback);
     }
 }
