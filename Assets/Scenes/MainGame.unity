@@ -4101,8 +4101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
-  condition: 
+  nameItem: Circuito
+  condition: Computador
 --- !u!1 &411840578
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,7 +5079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
+  nameItem: Ferramenta
   condition: 
 --- !u!1 &515964255
 GameObject:
@@ -10392,7 +10392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
+  nameItem: Chaves
   condition: 
 --- !u!1 &1035109789
 GameObject:
@@ -11207,8 +11207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
-  condition: 
+  nameItem: Cartao
+  condition: Chaves
 --- !u!1 &1100029585
 GameObject:
   m_ObjectHideFlags: 0
@@ -20721,7 +20721,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.061188713, y: 1.5293139e-15, z: -2.4946555e-14, w: 0.99812627}
+  m_LocalRotation: {x: 0.061188713, y: 1.5293136e-15, z: -2.4946555e-14, w: 0.99812627}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -22392,8 +22392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
-  condition: 
+  nameItem: Computador
+  condition: Cartao
 --- !u!1001 &310467162768294395
 PrefabInstance:
   m_ObjectHideFlags: 0
