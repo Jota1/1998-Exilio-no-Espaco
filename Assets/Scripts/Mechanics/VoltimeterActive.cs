@@ -18,9 +18,6 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(numberOrderPuzzle == puzzleController.puzzleProgression)
-        {
-            voltimeterController.ActiveVoltimeter();
-        }
+        voltimeterController.ActiveVoltimeter();
     }
 }
