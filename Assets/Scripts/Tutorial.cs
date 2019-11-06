@@ -7,6 +7,7 @@ public class Tutorial : MonoBehaviour
 {
     int wasdCounter; //contando o tempo que o jogador ficou andando
     public static bool tutoMovFinalizado;
+    public static bool tutoGrvtFinalizado; 
 
     bool firstGravityOn; //identificando a primeira vez q ligou a gravidade 
 
@@ -23,16 +24,13 @@ public class Tutorial : MonoBehaviour
     void Update()
     {
         TutoMovimentação();
-        TutoGravity();
+        //TutoGravity();
 
-        if (/*!tutoMovFinalizado &&*/ GameController.doneSpeak3)
+        if (GameController.doneSpeak3 && !tutoGrvtFinalizado)
         {
             DialogueManager.openDialogueBox = true;            
         }
-        //if (DialogueManager.openDialogueBox)
-        //{
-        //    Invoke("CloseDialogueBox", 4f);
-        //}
+        else { DialogueManager.openDialogueBox = false; }
     }
 
     void CloseDialogueBox ()
@@ -47,7 +45,7 @@ public class Tutorial : MonoBehaviour
             wasdCounter++;
         }
 
-        if (wasdCounter >= 400)
+        if (wasdCounter >= 800)
         {
             tutoMovFinalizado = true;
             dialogo_TXT_Tutorial.text = "Segure 'espaço' e clique em 'Desligar Gravidade'";
@@ -56,11 +54,14 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    void TutoGravity ()
-    {
-        if (tutoMovFinalizado)
-        {
-            //inicia tutorial gravidade 
-        }
-    }
+    //void TutoGravity ()
+    //{
+    //    if (tutoMovFinalizado)
+    //    {
+    //        if (tutoGrvtFinalizado)
+    //        {
+                
+    //        }
+    //    }
+    //}
 }

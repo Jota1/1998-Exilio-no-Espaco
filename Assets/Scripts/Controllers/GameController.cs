@@ -17,12 +17,25 @@ public class GameController : MonoBehaviour
     [SerializeField]
     AudioClip fala2_Carol;
     [SerializeField]
+    AudioClip fala3_Carol; 
+    [SerializeField]
     AudioClip fala1_Hal;
     [SerializeField]
+    AudioClip fala2_Hal;
+    [SerializeField]
+    AudioClip fala3_Hal;
+    [SerializeField]
+    AudioClip fala4_Hal; 
+    [SerializeField]
     AudioSource ECG; //EletroCardioGrama
+
     bool doneSpeak;
     bool doneSpeak2;
     public static bool doneSpeak3;
+    bool doneSpeak4;
+    bool doneSpeak5;
+    bool doneSpeak6;
+    bool doneSpeak7; 
 
     bool firstDialogueTuto; //primeira fala do tutorial
 
@@ -71,30 +84,57 @@ public class GameController : MonoBehaviour
     //Cinematic Inicio do jogo
     IEnumerator StartGame() // refazer esquema de falas por som atraves do dialogue manager
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(6f);
         if (doneSpeak == false)
         {
-            playerAudio.PlayOneShot(fala1_Carol);
+            playerAudio.PlayOneShot(fala1_Hal);
             doneSpeak = true;
         }
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3.5f); 
+        if (doneSpeak2 == false)
+        {
+            playerAudio.PlayOneShot(fala1_Carol);
+            doneSpeak2 = true;
+        }
+
+        yield return new WaitForSeconds(6.3f);
         ECG.Stop();
         blackImage.SetActive(false);
         firstDialogueTuto = true;
         
-        if (doneSpeak2 == false)
-        {
-            playerAudio.PlayOneShot(fala1_Hal);
-            doneSpeak2 = true;
-        }
-
-        yield return new WaitForSeconds(9f);
-
         if (doneSpeak3 == false)
         {
-            playerAudio.PlayOneShot(fala2_Carol);
+            playerAudio.PlayOneShot(fala2_Hal);
             doneSpeak3 = true;
+        }
+
+        yield return new WaitForSeconds(6f);
+
+        if (Tutorial.tutoGrvtFinalizado)
+        {
+            yield return new WaitForSeconds(3f);
+            if (doneSpeak4 == false)
+            {
+                playerAudio.PlayOneShot(fala3_Carol);
+                doneSpeak4 = true;
+            }
+
+            yield return new WaitForSeconds(7f);
+
+            if (doneSpeak5 == false)
+            {
+                playerAudio.PlayOneShot(fala3_Hal);
+                doneSpeak5 = true;
+            }
+
+            yield return new WaitForSeconds(4f);
+
+            if (doneSpeak6 == false)
+            {
+                playerAudio.PlayOneShot(fala4_Hal);
+                doneSpeak6 = true;
+            }
         }
     }
 }

@@ -14,9 +14,12 @@ public class CursorChange : MonoBehaviour
     void Update()
     {
         UpdateCursorTexture();
+
+        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 
-    void UpdateCursorTexture ()
+    void UpdateCursorTexture () //fazer o cursor ignorar a layer do jogador 
     {
         Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit2;
