@@ -114,6 +114,7 @@ public class Voltimeter : MonoBehaviour
         voltimeterBar.SetActive(false);
         countRights = 0;
         completeMinigame = true;
+        Disjuntor.forceRestore = true;
     }
 
     void Fail()

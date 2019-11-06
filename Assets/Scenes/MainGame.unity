@@ -6288,6 +6288,21 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -3547196787426154821, guid: e90a4c91afac4e74da7ada99f99e8e58,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155466501906963412, guid: e90a4c91afac4e74da7ada99f99e8e58,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501845997844598847, guid: e90a4c91afac4e74da7ada99f99e8e58,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e90a4c91afac4e74da7ada99f99e8e58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6342,21 +6357,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3547196787426154821, guid: e90a4c91afac4e74da7ada99f99e8e58,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8155466501906963412, guid: e90a4c91afac4e74da7ada99f99e8e58,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8501845997844598847, guid: e90a4c91afac4e74da7ada99f99e8e58,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90a4c91afac4e74da7ada99f99e8e58, type: 3}
@@ -7953,7 +7953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f56ae38e02664fa5ea5020c5163e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOrderPuzzle: 0
+  condition:
+  - Fusivel 1
+  - Fusivel 2
+  puzzleNumber: 1
 --- !u!1 &775366321
 GameObject:
   m_ObjectHideFlags: 0
@@ -13848,7 +13851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f56ae38e02664fa5ea5020c5163e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOrderPuzzle: 0
+  condition: []
+  puzzleNumber: 0
 --- !u!114 &1368798651 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
@@ -17102,7 +17106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f56ae38e02664fa5ea5020c5163e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOrderPuzzle: 0
+  condition: []
+  puzzleNumber: 0
 --- !u!1001 &1692598555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18258,7 +18263,7 @@ PrefabInstance:
     - target: {fileID: 3614084252119395604, guid: 3af0f53cebe4b88469713b88871d9930,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -17
+      value: -17.000061
       objectReference: {fileID: 0}
     - target: {fileID: 3614084252119395604, guid: 3af0f53cebe4b88469713b88871d9930,
         type: 3}
@@ -21616,7 +21621,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.061188713, y: 1.5293139e-15, z: -2.4946555e-14, w: 0.99812627}
+  m_LocalRotation: {x: 0.061188713, y: 1.5293136e-15, z: -2.4946555e-14, w: 0.99812627}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24595,7 +24600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: Fiacao
+  nameItem: Template
   condition: Ferramenta
   puzzleNumber: 2
   disappear: 0
@@ -24810,7 +24815,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f56ae38e02664fa5ea5020c5163e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOrderPuzzle: 0
+  condition:
+  - "Fia\xE7ao"
+  - Template
+  puzzleNumber: 2
 --- !u!4 &4581150985800124108
 Transform:
   m_ObjectHideFlags: 0

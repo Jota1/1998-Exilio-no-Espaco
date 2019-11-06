@@ -10,6 +10,8 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public string[] condition;
 
+    public int puzzleNumber;
+
     void Awake()
     {
         voltimeterController = FindObjectOfType<Voltimeter>();
@@ -18,12 +20,12 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        voltimeterController.ActiveVoltimeter();
+        if(CheckCondition() && FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber)
+            voltimeterController.ActiveVoltimeter();
     }
 
-    public void CheckCondition()
+    public bool CheckCondition()
     {
-
-
+        return FindObjectOfType<Inventory>().CheckCondition(condition[0]) && FindObjectOfType<Inventory>().CheckCondition(condition[1]);
     }
 }
