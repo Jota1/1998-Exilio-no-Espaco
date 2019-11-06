@@ -111,7 +111,6 @@ public class Voltimeter : MonoBehaviour
 
     void Complete()
     {
-        FindObjectOfType<PuzzleController>().puzzleProgression++;
         voltimeterBar.SetActive(false);
         countRights = 0;
         completeMinigame = true;
