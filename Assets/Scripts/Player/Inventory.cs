@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
         
         for(int i = 0; i < itemList.Count; i++)
         {
-            if (item == condition)
+            if (itemList[i].nameItem == condition)
                 item = condition;
         }
 
