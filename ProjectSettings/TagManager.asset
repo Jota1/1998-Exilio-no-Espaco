@@ -9,6 +9,7 @@ TagManager:
   - PseudoEscada
   - PseudoPorta
   - PseudoPortaP2
+  - Detect_Sala_Criogenia
   layers:
   - Default
   - TransparentFX

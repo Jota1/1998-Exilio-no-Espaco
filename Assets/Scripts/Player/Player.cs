@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
     private Vector3 moveDirection = Vector3.zero;
 
+    public static bool detect_sala_criogenia_P3;
+
     void Start()
     {        
         rb = GetComponent<Rigidbody>();
@@ -225,6 +227,11 @@ public class Player : MonoBehaviour
             transform.rotation = checkpoint_SalaGravidade.rotation;
 
             Debug.Log("Porta Para Sala Gravidade");
+        }
+
+        if (objCol.tag == "Detect_Sala_Criogenia")
+        {
+            detect_sala_criogenia_P3 = true;
         }
     }
 
