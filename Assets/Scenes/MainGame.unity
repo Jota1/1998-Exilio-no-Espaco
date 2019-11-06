@@ -15247,8 +15247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f56ae38e02664fa5ea5020c5163e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  condition: []
-  puzzleNumber: 0
+  condition:
+  - Circuito
+  puzzleNumber: 3
 --- !u!114 &1368798651 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,

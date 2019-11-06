@@ -24,7 +24,7 @@ public class Item : MonoBehaviour, IInteract
     public void Interaction()
     {
 
-        if ((FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "") && puzzleNumber == 1)
+        if ((FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "") && puzzleNumber == FindObjectOfType<PuzzleController>().puzzleOrder)
         {
             FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
 

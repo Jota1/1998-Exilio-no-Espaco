@@ -115,6 +115,16 @@ public class Voltimeter : MonoBehaviour
         countRights = 0;
         completeMinigame = true;
         Disjuntor.forceRestore = true;
+
+        if(FindObjectOfType<PuzzleController>().puzzleOrder == 2)
+        {
+            FindObjectOfType<PuzzleController>().FinishPuzzle2();
+        }
+
+        if (FindObjectOfType<PuzzleController>().puzzleOrder == 3)
+        {
+            FindObjectOfType<PuzzleController>().FinishPuzzle3();
+        }
     }
 
     void Fail()
