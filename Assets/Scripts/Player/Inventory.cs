@@ -42,6 +42,12 @@ public class Inventory : MonoBehaviour
 
     public  void ClearList()
     {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].GetComponentInChildren<Text>().text = "";
+            slots[i].SetActive(false);
+        }
+
         itemList.Clear();
     }
 
