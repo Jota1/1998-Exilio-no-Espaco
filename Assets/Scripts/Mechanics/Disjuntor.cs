@@ -15,12 +15,8 @@ public class Disjuntor : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(numberOrderPuzzle == puzzleController.puzzleProgression)
-        {
-            puzzleController.puzzleProgression++;
-            Feedback();
-            puzzleController.FinishPuzzle();
-        }
+         Feedback();
+         puzzleController.FinishPuzzle();
     }
 
     void Feedback()

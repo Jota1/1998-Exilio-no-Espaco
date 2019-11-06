@@ -13,26 +13,26 @@ public class SetLight : MonoBehaviour
 
     public void SetLight1()
     {
-
+        // 4
     }
 
     public void SetLight2()
     {
-
+        // 5
     }
 
     public void SetLight3()
     {
-
+        // 1
     }
 
     public void SetLight4()
     {
-
+        // 2
     }
 
     public void SetLight5()
     {
-
+        // 3
     }
 }
