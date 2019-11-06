@@ -7,14 +7,11 @@ public class PuzzleController : MonoBehaviour
 
     public int puzzleOrder;
 
+    public static bool endGame;
+
     void Start()
     {
         puzzleOrder = 1;
-    }
-
-    void Update()
-    {
-
     }
 
     public void FinishPuzzle1()
@@ -32,5 +29,6 @@ public class PuzzleController : MonoBehaviour
     public void FinishPuzzle3()
     {
         FindObjectOfType<Inventory>().ClearList();
+        endGame = true;
     }
 }
