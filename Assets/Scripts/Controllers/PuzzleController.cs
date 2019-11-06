@@ -5,16 +5,9 @@ using UnityEngine;
 public class PuzzleController : MonoBehaviour
 {
 
-
-
     private void Update()
     {
 
-    }
-
-    public void FinishPuzzle()
-    {
-        
     }
 
     public void FinishPuzzle1()

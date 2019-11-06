@@ -10,6 +10,19 @@ public class SetLight : MonoBehaviour
     public bool lightSet4;
     public bool lightSet5;
 
+    public bool finishMinigame;
+
+    public Item fusivel1;
+
+
+    public void FinishSetLight()
+    {
+        if(lightSet1 && lightSet2 && lightSet3 && lightSet4 && lightSet5 && !finishMinigame)
+        {
+            finishMinigame = true;
+            FindObjectOfType<Inventory>().itemList.Add(fusivel1);
+        }
+    }
 
     public void SetLight1()
     {
