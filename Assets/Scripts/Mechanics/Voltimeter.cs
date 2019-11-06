@@ -99,7 +99,7 @@ public class Voltimeter : MonoBehaviour
         else
             Complete();
 
-
+        Feedback(positiveFeedback);
 
         RandomizeMark();
     }
@@ -110,6 +110,8 @@ public class Voltimeter : MonoBehaviour
             countRights--;
         else
             Fail();
+
+        Feedback(negativeFeedback);
 
         RandomizeMark();
     }
