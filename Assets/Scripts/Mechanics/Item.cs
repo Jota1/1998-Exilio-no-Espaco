@@ -12,6 +12,8 @@ public class Item : MonoBehaviour, IInteract
 
     public bool disappear;
 
+    public bool showInInventory;
+
     public bool colectItem;
 
     public PuzzleController puzzleController { get; set; }
