@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -10,14 +11,18 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        
+        FeedbackInventario();
     }
 
     void FeedbackInventario()
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots
+            if (itemList[i].showInInventory)
+            {
+                slots[i].GetComponentInChildren<Text>().text = itemList[i].nameItem;
+                slots[i].SetActive(true);
+            }
         }
     }
 

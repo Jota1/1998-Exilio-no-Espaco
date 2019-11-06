@@ -12,7 +12,13 @@ public class PuzzleController : MonoBehaviour
     //contador
     public GameObject timeCounterP3;
     public Text timeCounterP3_TEXT; 
-    public float counterP3_seconds, counterP3_minutes; 
+    public float counterP3_seconds, counterP3_minutes;
+
+    // Puzzle 2
+    public GameObject doorToPuzzle2;
+
+    // Puzzle 3
+    public GameObject doorToPuzzle3;
 
     void Start()
     {
@@ -29,12 +35,14 @@ public class PuzzleController : MonoBehaviour
     {
         FindObjectOfType<Inventory>().ClearList();
         puzzleOrder++;
+        doorToPuzzle2.SetActive(false);
     }
 
     public void FinishPuzzle2()
     {
         FindObjectOfType<Inventory>().ClearList();
         puzzleOrder++;
+        doorToPuzzle3.SetActive(false);
     }
 
     public void FinishPuzzle3()
