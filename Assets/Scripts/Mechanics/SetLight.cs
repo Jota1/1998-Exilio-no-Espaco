@@ -10,15 +10,29 @@ public class SetLight : MonoBehaviour
     public bool lightSet4;
     public bool lightSet5;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void SetLight1()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLight2()
     {
-        
+
+    }
+
+    public void SetLight3()
+    {
+
+    }
+
+    public void SetLight4()
+    {
+
+    }
+
+    public void SetLight5()
+    {
+
     }
 }

@@ -5177,6 +5177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853287103}
   - component: {fileID: 853287104}
+  - component: {fileID: 853287105}
   m_Layer: 0
   m_Name: 2
   m_TagString: Interagivel
@@ -5212,6 +5213,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2.0131903}
   m_Center: {x: 0, y: 0, z: 0.50659513}
+--- !u!114 &853287105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853287102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872c952b788470b4cbc7c703f12e6f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSet1: 0
+  lightSet2: 0
+  lightSet3: 0
+  lightSet4: 0
+  lightSet5: 0
 --- !u!1 &856239229
 GameObject:
   m_ObjectHideFlags: 0
@@ -12318,7 +12336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameItem: Computador
-  condition: 
+  condition: Ferramenta
 --- !u!1 &1756280128
 GameObject:
   m_ObjectHideFlags: 0
@@ -15227,7 +15245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991200940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.51}
+  m_LocalPosition: {x: -0.25, y: 0, z: 0.51}
   m_LocalScale: {x: 0.68359375, y: 1.5625, z: 1.5625}
   m_Children: []
   m_Father: {fileID: 853287103}
@@ -15864,7 +15882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
+  nameItem: Ferramenta
   condition: 
 --- !u!1 &2054298281
 GameObject:
