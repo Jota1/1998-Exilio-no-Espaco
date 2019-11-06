@@ -25,8 +25,10 @@ public class Disjuntor : MonoBehaviour, IInteract
             Feedback(positiveFeedback);
             puzzleController.FinishPuzzle1();
         }
-
-        Feedback(negativeFeedback);
+        else
+        {
+            Feedback(negativeFeedback);
+        }
     }
 
     void Feedback(AudioClip feedback)
