@@ -4103,7 +4103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Circuito
   condition: Computador
-  puzzleNumber: 0
+  puzzleNumber: 3
   disappear: 0
 --- !u!1 &411840578
 GameObject:
@@ -5083,7 +5083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Ferramenta
   condition: 
-  puzzleNumber: 0
+  puzzleNumber: 3
   disappear: 0
 --- !u!1 &515964255
 GameObject:
@@ -10400,7 +10400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Chaves
   condition: 
-  puzzleNumber: 0
+  puzzleNumber: 3
   disappear: 0
 --- !u!1 &1035109789
 GameObject:
@@ -11217,7 +11217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Cartao
   condition: Chaves
-  puzzleNumber: 0
+  puzzleNumber: 3
   disappear: 0
 --- !u!1 &1100029585
 GameObject:
@@ -17132,7 +17132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Fusivel 3
   condition: Ferramenta
-  puzzleNumber: 0
+  puzzleNumber: 1
   disappear: 0
 --- !u!1 &1756280128
 GameObject:
@@ -21347,7 +21347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Ferramenta
   condition: 
-  puzzleNumber: 0
+  puzzleNumber: 1
   disappear: 0
 --- !u!1 &2039914740
 GameObject:
@@ -22411,7 +22411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Computador
   condition: Cartao
-  puzzleNumber: 0
+  puzzleNumber: 3
   disappear: 0
 --- !u!1001 &310467162768294395
 PrefabInstance:
@@ -23640,8 +23640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Chaves
   condition: 
-  puzzleNumber: 0
-  disappear: 0
+  puzzleNumber: 2
+  disappear: 1
 --- !u!1 &4581150985485430816
 GameObject:
   m_ObjectHideFlags: 0
@@ -23689,7 +23689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Fiacao
   condition: Ferramenta
-  puzzleNumber: 0
+  puzzleNumber: 2
   disappear: 0
 --- !u!65 &4581150985485430846
 BoxCollider:
@@ -23764,8 +23764,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Codigo
   condition: 
-  puzzleNumber: 0
-  disappear: 0
+  puzzleNumber: 2
+  disappear: 1
 --- !u!23 &4581150985503282844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23961,9 +23961,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
+  nameItem: Painel
   condition: Chaves
-  puzzleNumber: 0
+  puzzleNumber: 2
   disappear: 0
 --- !u!33 &4581150985919157376
 MeshFilter:
@@ -24218,7 +24218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Ferramenta
   condition: Codigo
-  puzzleNumber: 0
+  puzzleNumber: 2
   disappear: 0
 --- !u!4 &4581150986732935530
 Transform:
@@ -24278,9 +24278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameItem: 
-  condition: 
-  puzzleNumber: 0
+  nameItem: "Fia\xE7ao"
+  condition: Painel
+  puzzleNumber: 2
   disappear: 0
 --- !u!23 &4581150986811408722
 MeshRenderer:

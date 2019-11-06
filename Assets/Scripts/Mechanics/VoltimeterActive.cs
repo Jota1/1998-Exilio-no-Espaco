@@ -8,7 +8,7 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public PuzzleController puzzleController { get; set; }
 
-    public int numberOrderPuzzle;
+    public string[] condition;
 
     void Awake()
     {
@@ -19,5 +19,11 @@ public class VoltimeterActive : MonoBehaviour, IInteract
     public void Interaction()
     {
         voltimeterController.ActiveVoltimeter();
+    }
+
+    public void CheckCondition()
+    {
+
+
     }
 }
