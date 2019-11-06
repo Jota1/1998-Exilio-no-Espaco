@@ -19,13 +19,12 @@ public class Player : MonoBehaviour
 
     [Header("Values")]
     public float speed; //velocidade do player
+    public float speedGravity; // velocidade do player na gravidade
     public float gravity; //gravidade
     public float turnSpeed; //velocidade que o jogador gira
     public float gravityForce; //impacto da gravidade quando desligada   
     public float torqueForcer; //força do torque no jogador quando ele esta se movimentando em gravidade zero
     public float turnSpeedZeroG; //velocidade que o jogador vira na gravidade zero      
-    public float m_MovementSmoothing; // Suavização da velocidade
-    private Vector3 m_Velocity = Vector3.zero; // Valor de referência pra movimentação
 
     [Header("TP")] //temporario 
     public Transform checkPoint_SalaP2;
@@ -86,43 +85,78 @@ public class Player : MonoBehaviour
     //movimentação na gravidade zero
     void ZeroGravityMovement ()
     {
+        #region Old Code
+        ////cima baixo movimento
+        //if (Input.GetKey(KeyCode.LeftShift) && state == States.floating)
+        //{
+        //    Vector3 targetVelocity = new Vector3(rb.velocity.x, speed * Time.deltaTime, rb.velocity.z);
+        //    rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+        //}
 
-        //cima baixo movimento
-        if (Input.GetKey(KeyCode.LeftShift) && state == States.floating)
+        //else if (Input.GetKey(KeyCode.LeftControl) && state == States.floating)
+        //{
+        //    rb.velocity = Vector3.zero;
+        //    rb.AddForce(Vector3.down * torqueForcer, ForceMode.Impulse);
+        //}
+
+        ////frente tras movimento
+        //if (Input.GetKey(KeyCode.W) && state == States.floating)
+        //{
+        //    Vector3 targetVelocity = new Vector3(rb.velocity.x, rb.velocity.y, speed * Time.deltaTime);
+        //    rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+        //}
+        //else if (Input.GetKey(KeyCode.S) && state == States.floating)
+        //{
+        //    rb.velocity = Vector3.zero;
+        //    rb.AddForce(transform.TransformDirection(Vector3.back) * torqueForcer, ForceMode.Impulse);
+        //}
+
+        ////rotação movimento 
+        //if (Input.GetKey(KeyCode.A) && state == States.floating)
+        //{
+        //    rb.velocity = Vector3.zero;
+        //    rb.AddTorque(Vector3.down * turnSpeedZeroG, ForceMode.Impulse);
+        //}
+        //else if (Input.GetKey(KeyCode.D) && state == States.floating)
+        //{
+        //    rb.velocity = Vector3.zero;
+        //    rb.AddTorque(Vector3.up * turnSpeedZeroG, ForceMode.Impulse);
+        //}
+        #endregion
+
+        #region Movement
+        moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        moveDirection = Vector2.ClampMagnitude(moveDirection, 1);
+
+        Vector3 camF = cam.forward;
+        Vector3 camR = cam.right;
+
+        camF.y = 0;
+        camR.y = 0;
+        camF = camF.normalized;
+        camR = camR.normalized;
+
+        if (moveDirection.magnitude > 0)
         {
-            Vector3 targetVelocity = new Vector3(rb.velocity.x, speed * Time.deltaTime, rb.velocity.z);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+            Quaternion lookRotation = Quaternion.LookRotation(camF * moveDirection.y + camR * moveDirection.x);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, turnSpeed * Time.deltaTime);
         }
 
-        else if (Input.GetKey(KeyCode.LeftControl) && state == States.floating)
+        transform.position += (camF * moveDirection.y + camR * moveDirection.x) * Time.deltaTime * speedGravity;
+        #endregion
+
+        if (Input.GetKey(KeyCode.LeftShift) && state == States.floating)
+        {
+            rb.velocity = Vector3.zero;
+            rb.AddForce(Vector3.up * torqueForcer, ForceMode.Impulse);
+        }
+
+        if (Input.GetKey(KeyCode.LeftControl) && state == States.floating)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.down * torqueForcer, ForceMode.Impulse);
         }
 
-        //frente tras movimento
-        if (Input.GetKey(KeyCode.W) && state == States.floating)
-        {
-            Vector3 targetVelocity = new Vector3(rb.velocity.x, rb.velocity.y, speed * Time.deltaTime);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-        }
-        else if (Input.GetKey(KeyCode.S) && state == States.floating)
-        {
-            rb.velocity = Vector3.zero;
-            rb.AddForce(transform.TransformDirection(Vector3.back) * torqueForcer, ForceMode.Impulse);
-        }
-       
-        //rotação movimento 
-        if (Input.GetKey(KeyCode.A) && state == States.floating)
-        {
-            rb.velocity = Vector3.zero;
-            rb.AddTorque(Vector3.down * turnSpeedZeroG, ForceMode.Impulse);
-        }
-        else if (Input.GetKey(KeyCode.D) && state == States.floating)
-        {
-            rb.velocity = Vector3.zero;
-            rb.AddTorque(Vector3.up * turnSpeedZeroG, ForceMode.Impulse);
-        }
     }
     #endregion
 
@@ -138,7 +172,7 @@ public class Player : MonoBehaviour
     }
 
     //mudança de estados do jogador (flutuando / no chão)
-    void ChangeStates()
+    public  void ChangeStates()
     {
         if (state == States.floating && state != States.grounded)
         {
@@ -215,6 +249,8 @@ public class Player : MonoBehaviour
     //mecanica de gravidade zero 
     IEnumerator ZeroGravity()
     {
+        Tutorial.tutoGrvtFinalizado = true;
+
         state = States.floating;
         rb.useGravity = false;
         gravity = -0.0001f;

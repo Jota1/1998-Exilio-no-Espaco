@@ -1915,7 +1915,7 @@ GameObject:
   - component: {fileID: 315485651}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 411529700}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2591,7 +2591,7 @@ GameObject:
   - component: {fileID: 515348066}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4343,7 +4343,7 @@ GameObject:
   - component: {fileID: 768549727}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4875,10 +4875,9 @@ GameObject:
   m_Component:
   - component: {fileID: 853287103}
   - component: {fileID: 853287104}
-  - component: {fileID: 853287105}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4911,20 +4910,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2.0131903}
   m_Center: {x: 0, y: 0, z: 0.50659513}
---- !u!114 &853287105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853287102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameItem: 
-  condition: 
 --- !u!1 &856239229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5920,9 +5905,8 @@ GameObject:
   - component: {fileID: 966513422}
   - component: {fileID: 966513425}
   - component: {fileID: 966513424}
-  - component: {fileID: 966513423}
   m_Layer: 0
-  m_Name: "Fus\xEDvel 2"
+  m_Name: Voltimeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5942,19 +5926,6 @@ Transform:
   m_Father: {fileID: 768549725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &966513423
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966513421}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &966513424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7156,7 +7127,7 @@ GameObject:
   - component: {fileID: 1095463776}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8645,7 +8616,7 @@ GameObject:
   - component: {fileID: 1359694632}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11847,7 +11818,7 @@ GameObject:
   - component: {fileID: 1743190429}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13085,7 +13056,7 @@ GameObject:
   - component: {fileID: 1882154021}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15106,7 +15077,7 @@ GameObject:
   - component: {fileID: 2038784680}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15846,7 +15817,7 @@ GameObject:
   - component: {fileID: 2145583580}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17086,7 +17057,7 @@ GameObject:
   - component: {fileID: 4581150985353015936}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17118,7 +17089,7 @@ GameObject:
   - component: {fileID: 4581150985485430818}
   m_Layer: 0
   m_Name: 7
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17206,7 +17177,7 @@ GameObject:
   - component: {fileID: 4581150985494290084}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17329,7 +17300,7 @@ GameObject:
   - component: {fileID: 4581150985756163066}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17403,7 +17374,7 @@ GameObject:
   - component: {fileID: 4581150985800124112}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17641,7 +17612,7 @@ GameObject:
   - component: {fileID: 4581150986351790424}
   m_Layer: 0
   m_Name: 6
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17716,7 +17687,7 @@ GameObject:
   - component: {fileID: 4581150986732935534}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18020,6 +17991,21 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 609274360}
+    - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: speedGravity
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: torqueForcer
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 160
+      objectReference: {fileID: 0}
     - target: {fileID: 5198806393719017432, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}
       propertyPath: m_LocalPosition.x
