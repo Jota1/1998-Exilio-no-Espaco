@@ -24,13 +24,13 @@ public class Tutorial : MonoBehaviour
     void Update()
     {
         TutoMovimentação();
-        //TutoGravity();
+        TutoGravity();
 
         if (GameController.doneSpeak3 && !tutoGrvtFinalizado)
         {
             DialogueManager.openDialogueBox = true;            
         }
-        else { DialogueManager.openDialogueBox = false; }
+        //else { DialogueManager.openDialogueBox = false; }
     }
 
     void CloseDialogueBox ()
@@ -54,14 +54,20 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    //void TutoGravity ()
-    //{
-    //    if (tutoMovFinalizado)
-    //    {
-    //        if (tutoGrvtFinalizado)
-    //        {
-                
-    //        }
-    //    }
-    //}
+    void TutoGravity()
+    {
+        if (tutoMovFinalizado)
+        {
+            if (tutoGrvtFinalizado)
+            {
+                dialogo_TXT_Tutorial.text = "Utilize SHIFT e CNTRL para se mover no eixo Y";
+                Invoke("CloseDialgueBox", 6f);
+            }
+        }
+    }
+
+    void CloseDialgueBox ()
+    {
+        DialogueManager.openDialogueBox = false;
+    }
 }
