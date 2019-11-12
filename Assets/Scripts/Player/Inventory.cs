@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
         {
             if (itemList[i].showInInventory)
             {
+                // Revela todos os slots
                 slots[i].GetComponentInChildren<Text>().text = itemList[i].nameItem;
                 slots[i].SetActive(true);
             }

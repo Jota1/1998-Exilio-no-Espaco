@@ -37,6 +37,7 @@ public class Item : MonoBehaviour, IInteract
         {
             colectItem = true;
 
+            // Adiciona no inventário
             FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());
 
             Feedback(positiveFeedback);
