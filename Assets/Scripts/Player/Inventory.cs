@@ -30,6 +30,7 @@ public class Inventory : MonoBehaviour
     // Verifica se tem o item no inventário
     public bool CheckCondition(string condition)
     {
+        // Variable Local
         string item = "";
         
         for(int i = 0; i < itemList.Count; i++)

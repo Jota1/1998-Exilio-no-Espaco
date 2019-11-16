@@ -27,7 +27,7 @@ public class Item : MonoBehaviour, IInteract
 
         colectItem = false;
 
-        // Alteração
+        
     }
 
     public void Interaction()

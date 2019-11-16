@@ -123,8 +123,7 @@ public class Voltimeter : MonoBehaviour
         completeMinigame = true;
         Disjuntor.forceRestore = true;
 
-        // Finaliza o puzzle
-
+        // Finish Puzzles
         if(FindObjectOfType<PuzzleController>().puzzleOrder == 2)
         {
             FindObjectOfType<PuzzleController>().FinishPuzzle2();

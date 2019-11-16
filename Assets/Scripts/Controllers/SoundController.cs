@@ -11,6 +11,7 @@ public class SoundController : MonoBehaviour
         //playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
+    // Play Feedback
     public void PlaySFX(AudioClip effect)
     {
         playerAudio.PlayOneShot(effect);

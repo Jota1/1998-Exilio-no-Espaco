@@ -8,6 +8,7 @@ public class Disjuntor : MonoBehaviour, IInteract
 
     public static bool forceRestore;
 
+    // Feedbacks
     public AudioClip positiveFeedback;
     public AudioClip negativeFeedback;
 

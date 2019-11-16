@@ -33,6 +33,7 @@ public class SetLight : MonoBehaviour, IInteract
 
     private void Update()
     {
+        // Set light
         if (lightSet1)
         {
             lightsFeedback[0].color = Color.green;
