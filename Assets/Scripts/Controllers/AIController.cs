@@ -1,14 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AIController : MonoBehaviour
 {
     public GameObject optionDialogue;
+
+    public Text textQuestion;
+    public Text textAnswerGood;
+    public Text textAnswerBad;
+
+    public string[] question;
+    public string[] answerGood;
+    public string[] answerBad;
+
     public bool onDialogue;
 
     [Header("Calculo AI")]
     public int choices;
+    public int choicesAnswer;
     public int timeToChoices;
 
     public bool setChoice;
@@ -20,17 +31,19 @@ public class AIController : MonoBehaviour
 
     void Update()
     {
-        ShowOption(onDialogue);
+
+        if(onDialogue)
+            ShowOption();
     }
 
-    void ShowOption(bool show)
+    void ShowOption()
     {
-        optionDialogue.SetActive(show);
-    }
+        textQuestion.text = question[choicesAnswer];
+        textAnswerGood.text = answerGood[choicesAnswer];
+        textAnswerBad.text = answerBad[choicesAnswer];
 
-    public void SetActiveDialogue(bool active)
-    {
-        onDialogue = active;
+        optionDialogue.SetActive(true);
+        onDialogue = false;
     }
 
     void CalculateChoices()
@@ -50,7 +63,7 @@ public class AIController : MonoBehaviour
 
         if (!setChoice)
         {
-            FindObjectOfType<PuzzleController>().counterP3_minutes = Random.Range(2f, 6f);
+            FindObjectOfType<PuzzleController>().counterP3_minutes = Random.Range(2f, 5f);
         } else
         {
             FindObjectOfType<PuzzleController>().counterP3_minutes = 5f;
@@ -61,10 +74,22 @@ public class AIController : MonoBehaviour
     public void GoodChoice()
     {
         choices++;
+        choicesAnswer++;
+
+        onDialogue = false;
+
+        if (choicesAnswer == timeToChoices)
+            ReactChoice();
     }
 
     public void BadChoice()
     {
         choices--;
+        choicesAnswer++;
+
+        onDialogue = false;
+
+        if (choicesAnswer == timeToChoices)
+            ReactChoice();
     }
 }

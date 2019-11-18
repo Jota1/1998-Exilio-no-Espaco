@@ -2817,7 +2817,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 143870454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677908361}
+        m_MethodName: GoodChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 567723479}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &143870454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15173,7 +15195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &567723480
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15193,7 +15215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000022888, y: 0.000024796}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -937.6, y: -725.8}
   m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!114 &567723481
@@ -27826,7 +27848,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1068289719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677908361}
+        m_MethodName: BadChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 567723479}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1068289719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44111,6 +44155,7 @@ GameObject:
   - component: {fileID: 1677908358}
   - component: {fileID: 1677908359}
   - component: {fileID: 1677908360}
+  - component: {fileID: 1677908361}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -44257,6 +44302,36 @@ MonoBehaviour:
   sala1: {fileID: 191149543}
   sala2: {fileID: 879287999}
   sala3: {fileID: 404362592}
+--- !u!114 &1677908361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677908352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ba4fe1f14dd7248bd0e8531a4d4b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionDialogue: {fileID: 567723479}
+  textQuestion: {fileID: 1751674866}
+  textAnswerGood: {fileID: 694893958}
+  textAnswerBad: {fileID: 1681050714}
+  question:
+  - Choice 1
+  - Choice 2
+  answerGood:
+  - Good Choice 1
+  - Good Choice 2
+  answerBad:
+  - Bad Choice 1
+  - Bad Choice 2
+  onDialogue: 0
+  choices: 0
+  choicesAnswer: 0
+  timeToChoices: 2
+  setChoice: 0
 --- !u!1001 &1678309041
 PrefabInstance:
   m_ObjectHideFlags: 0
