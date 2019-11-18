@@ -18,9 +18,12 @@ public class AIController : MonoBehaviour
     public bool onDialogue;
 
     [Header("Calculo AI")]
-    public int choices;
+    public float choices;
     public int choicesAnswer;
     public int timeToChoices;
+
+    public float[] minTime;
+    
 
     public bool setChoice;
 
@@ -63,17 +66,14 @@ public class AIController : MonoBehaviour
 
         if (!setChoice)
         {
-            FindObjectOfType<PuzzleController>().counterP3_minutes = Random.Range(2f, 5f);
-        } else
-        {
-            FindObjectOfType<PuzzleController>().counterP3_minutes = 5f;
-        }
+            
+        } 
 
     }
 
     public void GoodChoice()
     {
-        choices++;
+        choices += 0.5f;
         choicesAnswer++;
 
         onDialogue = false;
@@ -84,7 +84,7 @@ public class AIController : MonoBehaviour
 
     public void BadChoice()
     {
-        choices--;
+        choices += 0f;
         choicesAnswer++;
 
         onDialogue = false;
