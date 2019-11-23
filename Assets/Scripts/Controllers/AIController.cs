@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class AIController : MonoBehaviour
 {
+    [Header("Text Question")]
     public GameObject optionDialogue;
 
     public Text textQuestion;
@@ -18,14 +19,24 @@ public class AIController : MonoBehaviour
     public bool onDialogue;
 
     [Header("Calculo AI")]
+    // Escolhas
     public float choices;
     public int choicesAnswer;
     public int timeToChoices;
 
-    public float[] minTime;
-    
-
     public bool setChoice;
+
+    // Calculo para decisão
+    public float[] minTime;
+    public float[] timeCompletePuzzle;
+
+    private float timerPuzzle;
+
+    public float extraTime;
+
+    public bool countTime;
+
+    
 
     void Start()
     {
@@ -34,9 +45,30 @@ public class AIController : MonoBehaviour
 
     void Update()
     {
-
+        // Mostra perguntas de Hal
         if(onDialogue)
             ShowOption();
+
+        // Calcula o tempo para resolução dos puzzles
+        if (countTime)
+        {
+            timerPuzzle += Time.deltaTime;
+
+            timeCompletePuzzle[choicesAnswer] = timerPuzzle;
+
+        }  
+
+
+    }
+
+    public void EnableTimer()
+    {
+        countTime = true;
+    }
+
+    public void DisableTimer()
+    {
+        countTime = false;
     }
 
     void ShowOption()
@@ -66,7 +98,15 @@ public class AIController : MonoBehaviour
 
         if (!setChoice)
         {
-            
+            float media = 0;
+            float modifier = 0;
+
+            for (int i = 0; i < timeCompletePuzzle.Length; i++)
+            {
+                media = 0;
+            }
+
+            // FindObjectOfType<PuzzleController>().counterP3_minutes = 
         } 
 
     }
