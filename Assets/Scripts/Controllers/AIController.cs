@@ -99,14 +99,15 @@ public class AIController : MonoBehaviour
         if (!setChoice)
         {
             float media = 0;
-            float modifier = 0;
 
             for (int i = 0; i < timeCompletePuzzle.Length; i++)
             {
-                media = 0;
+                media += timeCompletePuzzle[i];
             }
 
-            // FindObjectOfType<PuzzleController>().counterP3_minutes = 
+            media /= timeCompletePuzzle.Length;
+
+            FindObjectOfType<PuzzleController>().counterP3_minutes = minTime[2] + media * choices;
         } 
 
     }
@@ -124,7 +125,11 @@ public class AIController : MonoBehaviour
 
     public void BadChoice()
     {
-        choices += 0f;
+        if (choices > 0)
+            choices -= 0.5f;
+        else
+            choices = 0f;
+
         choicesAnswer++;
 
         onDialogue = false;
