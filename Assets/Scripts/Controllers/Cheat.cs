@@ -15,21 +15,21 @@ public class Cheat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             player.transform.position = sala1.position;
-            FindObjectOfType<PuzzleController>().puzzleOrder = 1;
+            FindObjectOfType<PuzzleController>().puzzleOrder = 0;
             FindObjectOfType<Inventory>().ClearList();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             player.transform.position = sala2.position;
-            FindObjectOfType<PuzzleController>().puzzleOrder = 2;
+            FindObjectOfType<PuzzleController>().puzzleOrder = 1;
             FindObjectOfType<Inventory>().ClearList();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             player.transform.position = sala3.position;
-            FindObjectOfType<PuzzleController>().puzzleOrder = 3;
+            FindObjectOfType<PuzzleController>().puzzleOrder = 2;
             FindObjectOfType<Inventory>().ClearList();
         }
     }

@@ -44410,8 +44410,11 @@ MonoBehaviour:
   choices: 0
   choicesAnswer: 0
   timeToChoices: 2
-  minTime: []
   setChoice: 0
+  minTime: []
+  timeCompletePuzzle: []
+  extraTime: 0
+  countTime: 0
 --- !u!1001 &1678309041
 PrefabInstance:
   m_ObjectHideFlags: 0
