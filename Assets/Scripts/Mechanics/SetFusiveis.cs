@@ -78,22 +78,21 @@ public class SetFusiveis : MonoBehaviour
 
     public void SetFusivel1()
     {
-        // 2 // 4
+        // 2 
         SetFusiveis2 = !SetFusiveis2;
         SetFusiveis3 = true;
+        SetFusiveis1 = true;
     }
 
     public void SetFusivel2()
     {
         // 3
-        SetFusiveis2 = true;
-        SetFusiveis3 = !SetFusiveis3;
+        SetFusiveis3 = false;
     }
 
     public void SetFusivel3()
     {
-        // 1
+        // 1 
         SetFusiveis1 = !SetFusiveis1;
-        SetFusiveis2 = true;
     }
 }
