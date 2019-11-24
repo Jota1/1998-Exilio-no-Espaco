@@ -3363,7 +3363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &159068320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22750,11 +22750,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872c952b788470b4cbc7c703f12e6f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightSet1: 0
-  lightSet2: 0
-  lightSet3: 0
-  lightSet4: 0
-  lightSet5: 0
+  SetFusiveis1: 0
+  SetFusiveis2: 0
+  SetFusiveis3: 0
+  SetFusiveis4: 0
+  SetFusiveis5: 0
   miniPuzzle: {fileID: 991031132}
   lightsFeedback:
   - {fileID: 883288660}
