@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class SetLight : MonoBehaviour, IInteract
 {
-    public bool lightSet1;
-    public bool lightSet2;
-    public bool lightSet3;
-    public bool lightSet4;
-    public bool lightSet5;
+    public bool SetFusiveis1;
+    public bool SetFusiveis2;
+    public bool SetFusiveis3;
+    public bool SetFusiveis4;
+    public bool SetFusiveis5;
 
     public GameObject miniPuzzle;
 
@@ -24,17 +24,17 @@ public class SetLight : MonoBehaviour, IInteract
 
     private void Start()
     {
-        lightSet1 = true;
-        lightSet2 = true;
-        lightSet3 = true;
-        lightSet4 = true;
-        lightSet5 = true;
+        SetFusiveis1 = true;
+        SetFusiveis2 = true;
+        SetFusiveis3 = true;
+        SetFusiveis4 = true;
+        SetFusiveis5 = true;
     }
 
     private void Update()
     {
         // Set light
-        if (lightSet1)
+        if (SetFusiveis1)
         {
             lightsFeedback[0].color = Color.green;
         } else
@@ -42,7 +42,7 @@ public class SetLight : MonoBehaviour, IInteract
             lightsFeedback[0].color = Color.red;
         }
 
-        if (lightSet2)
+        if (SetFusiveis2)
         {
             lightsFeedback[1].color = Color.green;
         }
@@ -51,7 +51,7 @@ public class SetLight : MonoBehaviour, IInteract
             lightsFeedback[1].color = Color.red;
         }
 
-        if (lightSet3)
+        if (SetFusiveis3)
         {
             lightsFeedback[2].color = Color.green;
         }
@@ -60,7 +60,7 @@ public class SetLight : MonoBehaviour, IInteract
             lightsFeedback[2].color = Color.red;
         }
 
-        if (lightSet4)
+        if (SetFusiveis4)
         {
             lightsFeedback[3].color = Color.green;
         }
@@ -69,7 +69,7 @@ public class SetLight : MonoBehaviour, IInteract
             lightsFeedback[3].color = Color.red;
         }
 
-        if (lightSet5)
+        if (SetFusiveis5)
         {
             lightsFeedback[4].color = Color.green;
         }
@@ -89,7 +89,7 @@ public class SetLight : MonoBehaviour, IInteract
 
     public void FinishSetLight()
     {
-        if(!lightSet1 && !lightSet2 && !lightSet3 && !lightSet4 && !lightSet5 && !finishMinigame)
+        if(!SetFusiveis1 && !SetFusiveis2 && !SetFusiveis3 && !SetFusiveis4 && !SetFusiveis5 && !finishMinigame)
         {
             miniPuzzle.SetActive(false);
             finishMinigame = true;
@@ -100,39 +100,39 @@ public class SetLight : MonoBehaviour, IInteract
     public void SetLight1()
     {
         // 4
-        lightSet2 = true;
-        lightSet3 = false;
-        lightSet4 = false;
+        SetFusiveis2 = true;
+        SetFusiveis3 = false;
+        SetFusiveis4 = false;
     }
 
     public void SetLight2()
     {
         // 5
-        lightSet1 = false;
-        lightSet5 = true;
+        SetFusiveis1 = false;
+        SetFusiveis5 = true;
     }
 
     public void SetLight3()
     {
         // 1
-        lightSet1 = false;
-        lightSet3 = false;
-        lightSet4 = true;
+        SetFusiveis1 = false;
+        SetFusiveis3 = false;
+        SetFusiveis4 = true;
     }
 
     public void SetLight4()
     {
         // 2
-        lightSet2 = false;
-        lightSet5 = false;
+        SetFusiveis2 = false;
+        SetFusiveis5 = false;
     }
 
     public void SetLight5()
     {
         // 3
-        lightSet1 = true;
-        lightSet4 = false;
-        lightSet5 = true;
+        SetFusiveis1 = true;
+        SetFusiveis4 = false;
+        SetFusiveis5 = true;
        
     }
 }

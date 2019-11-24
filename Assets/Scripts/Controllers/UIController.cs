@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public Text questLog;
-    public static int actualPuzzle;
+    public int actualPuzzle;
 
     [Header("Quest Log Puzzle 1")]
     public static int fusiveisCount;
@@ -40,7 +40,7 @@ public class UIController : MonoBehaviour
 
         else if(actualPuzzle == 2)
         {
-            questLog.text = "Consiga as peças para reparar o botão. Painel (" + templateCount.ToString() + "/1) (" + fiacaoCount.ToString() + "/1)"; 
+            questLog.text = "Consiga as peças para reparar o botão. Painel (" + templateCount.ToString() + "/1) Fiação (" + fiacaoCount.ToString() + "/1)"; 
         } 
 
         else if(actualPuzzle == 3)
