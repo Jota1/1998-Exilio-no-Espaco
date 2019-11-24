@@ -46,7 +46,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {       
-        ChangeStates();     
+        ChangeStates();
+
+        if (Input.GetKeyDown(KeyCode.Space) && state == States.grounded)
+            state = States.floating;
+        else if (Input.GetKeyDown(KeyCode.Space) && state == States.floating)
+            state = States.grounded;
     }
 
     void FixedUpdate()
@@ -54,7 +59,7 @@ public class Player : MonoBehaviour
         //atualizando fisica com base na gravidade / estados do jogador
         if (state == States.grounded)
             BasicMovement();
-        else if(state == States.floating)
+        else if(state == States.floating )
         {
             ZeroGravityMovement();
         }              
