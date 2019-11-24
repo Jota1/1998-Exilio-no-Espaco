@@ -107,7 +107,7 @@ public class AIController : MonoBehaviour
 
             media /= timeCompletePuzzle.Length;
 
-            FindObjectOfType<PuzzleController>().counterP3_minutes = (int) minTime[2] + media * choices;
+            FindObjectOfType<PuzzleController>().totalTime = minTime[2] + media * choices;
         } 
 
     }

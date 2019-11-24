@@ -12,8 +12,7 @@ public class PuzzleController : MonoBehaviour
     // timer
     public GameObject timeCounterP3;
     public Text timeCounterP3_TEXT;
-    public float counterP3_seconds;
-    public float counterP3_minutes;
+    public float totalTime;
 
     // Puzzle 2
     public GameObject doorToPuzzle2;
@@ -27,9 +26,13 @@ public class PuzzleController : MonoBehaviour
         timeCounterP3.SetActive(false);        
     }
 
-    private void Update()
+    void Update()
     {
-        TimerPuzzle3();
+        if (puzzleOrder == 2 && !endGame && Player.detect_sala_criogenia_P3)
+        {
+            totalTime -= Time.deltaTime;
+            TimerPuzzle3(totalTime);
+        }
     }
 
     public void FinishPuzzle1()
@@ -54,18 +57,27 @@ public class PuzzleController : MonoBehaviour
         endGame = true;
     }
 
-    void TimerPuzzle3 ()
+    void TimerPuzzle3 (float totalSeconds)
     {
-        if (puzzleOrder == 2 && !endGame && Player.detect_sala_criogenia_P3)
+
+        // inicia contador 
+        timeCounterP3.SetActive(true);
+
+        int minutes = Mathf.FloorToInt(totalSeconds / 60f);
+        int seconds = Mathf.RoundToInt(totalSeconds % 60f);
+
+        string formatedSeconds = seconds.ToString();
+
+        if (seconds == 60)
         {
-            //inicia contador 
-            timeCounterP3.SetActive(true);
-            counterP3_minutes = (int)(counterP3_minutes / 60f);
-            counterP3_seconds = (int)(Time.deltaTime % 60f);
-            timeCounterP3_TEXT.text = counterP3_minutes.ToString("00") + ":" + counterP3_seconds.ToString("00");
+            seconds = 0;
+            minutes += 1;
         }
 
-        if (counterP3_minutes <= 0)
+        timeCounterP3_TEXT.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+
+
+        if (totalTime <= 0)
         {
             //acaba puzzle
             Debug.Log("morreu p3");
