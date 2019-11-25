@@ -1,12 +1,60 @@
 fileFormatVersion: 2
 guid: 7706de64811d69d439620237297a14c5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7930758126188088078
+    second: Sprite Sheet Sound Wave_0
+  - first:
+      213: -8021487130390188644
+    second: Sprite Sheet Sound Wave_1
+  - first:
+      213: -4139646831720765583
+    second: Sprite Sheet Sound Wave_2
+  - first:
+      213: 4682070970120741247
+    second: Sprite Sheet Sound Wave_3
+  - first:
+      213: -5174856160550457508
+    second: Sprite Sheet Sound Wave_4
+  - first:
+      213: -402999062117649449
+    second: Sprite Sheet Sound Wave_5
+  - first:
+      213: 6066145378655339290
+    second: Sprite Sheet Sound Wave_6
+  - first:
+      213: -6201287813202531023
+    second: Sprite Sheet Sound Wave_7
+  - first:
+      213: 5756545005250846016
+    second: Sprite Sheet Sound Wave_8
+  - first:
+      213: 2175734872536341493
+    second: Sprite Sheet Sound Wave_9
+  - first:
+      213: -6277297100045093302
+    second: Sprite Sheet Sound Wave_10
+  - first:
+      213: 7378310981655204956
+    second: Sprite Sheet Sound Wave_11
+  - first:
+      213: 8961321103529750645
+    second: Sprite Sheet Sound Wave_12
+  - first:
+      213: -5889092844758673461
+    second: Sprite Sheet Sound Wave_13
+  - first:
+      213: -8957230807891147649
+    second: Sprite Sheet Sound Wave_14
+  - first:
+      213: 7688361793705481897
+    second: Sprite Sheet Sound Wave_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +82,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +97,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +118,373 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 585
+        width: 235
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1835ad4e2a03a664dbf8fa0427bebf16
+      internalID: -7930758126188088078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 588
+        width: 236
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b389a5b760af0ab489fdee4acf6ac1cb
+      internalID: -8021487130390188644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_2
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 591
+        width: 228
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c277972cc5fd63145b8b11668be3ad1f
+      internalID: -4139646831720765583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_3
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 590
+        width: 227
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a1218c6c9bf614ab96166f182f2a13
+      internalID: 4682070970120741247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 246
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5f4cf2f4d0ce647aa0f59b9f0cac68
+      internalID: -5174856160550457508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 402
+        width: 241
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d992c9dc6bd061d498c0e90ff58c69d0
+      internalID: -402999062117649449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_6
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 409
+        width: 236
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0cab2c35a028e48be51ee9b87e4265
+      internalID: 6066145378655339290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_7
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 416
+        width: 236
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9da93a212f7a594d94560cd8c07fd08
+      internalID: -6201287813202531023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 205
+        width: 236
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a52b0dba0394041b224c4335f48122
+      internalID: 5756545005250846016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 208
+        width: 236
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24580b1bf026c94e8afd106ef63f95e
+      internalID: 2175734872536341493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_10
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 207
+        width: 236
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29b990908880164da0e3901359f7d97
+      internalID: -6277297100045093302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_11
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 205
+        width: 236
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d333d7b0e6661b40966275789eb66fb
+      internalID: 7378310981655204956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 212
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaea001e64754a7409a95f824cef913a
+      internalID: 8961321103529750645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_13
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 9
+        width: 236
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc487d65e7b3a0f42a93c3e121827952
+      internalID: -5889092844758673461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_14
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 6
+        width: 236
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de7d42be6aa73a4387867681b6893f8
+      internalID: -8957230807891147649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Sound Wave_15
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1
+        width: 236
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb69ed011266cb64cbf7a4e592186282
+      internalID: 7688361793705481897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 48620da68e44cf34fb19bdb3c9f68da9
     internalID: 0
     vertices: []
     indices: 
