@@ -30,6 +30,29 @@ public class Item : MonoBehaviour, IInteract
         
     }
 
+    void CheckItemCollect()
+    {
+
+        // Puzzle 1
+        if(nameItem == "Fusivel 1" || nameItem == "Fusivel 2" || nameItem == "Fusivel 3")
+        {
+            UIController.fusiveisCount++;
+        }
+
+        // Puzzle 2 
+        if (nameItem == "Fiaçao")
+        {
+            UIController.fiacaoCount = 1;
+        }
+
+        if (nameItem == "Template")
+        {
+            UIController.templateCount = 1;
+        }
+
+
+    }
+
     public void Interaction()
     {
 

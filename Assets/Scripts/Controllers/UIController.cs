@@ -8,14 +8,14 @@ public class UIController : MonoBehaviour
     public Text questLog;
     public int actualPuzzle;
 
-    [Header("Quest Log Puzzle 1")]
+    // Puzzle 1
     public static int fusiveisCount;
 
-    [Header("Quest Log Puzzle 2")]
+    // Puzzle 2
     public static int templateCount;
     public static int fiacaoCount;
 
-    [Header("Quest Log Puzzle 3")]
+    // Puzzle 3
     public static int circuitoCount;
 
     // Start is called before the first frame update

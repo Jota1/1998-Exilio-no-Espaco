@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
         FeedbackInventario();
     }
 
+
     void FeedbackInventario()
     {
         for (int i = 0; i < slots.Length; i++)

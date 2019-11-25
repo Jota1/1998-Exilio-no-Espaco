@@ -22,7 +22,7 @@ public class PuzzleController : MonoBehaviour
 
     void Start()
     {
-        puzzleOrder = 0;
+        puzzleOrder = 1;
         timeCounterP3.SetActive(false);        
     }
 
