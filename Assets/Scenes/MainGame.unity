@@ -9771,6 +9771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleNumber: 1
+  miniGame: {fileID: 159068319}
   positiveFeedback: {fileID: 8300000, guid: 6838119eac98d7449936e600851eaa98, type: 3}
   negativeFeedback: {fileID: 8300000, guid: 55f70757bcf67d64bb3a49efb1a79b10, type: 3}
 --- !u!114 &315485652
@@ -9794,7 +9795,6 @@ MonoBehaviour:
   - {fileID: 276174597}
   - {fileID: 677342017}
   finishMinigame: 0
-  disjuntor: {fileID: 0}
 --- !u!1001 &321580030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61659,7 +61659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.038738243, y: -0.7726245, z: 0.047364634, w: 0.63190776}
+  m_LocalRotation: {x: 0.038738236, y: -0.7726244, z: 0.04736462, w: 0.63190776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
