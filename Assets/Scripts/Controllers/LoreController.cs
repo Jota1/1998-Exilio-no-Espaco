@@ -19,8 +19,13 @@ public class LoreController : MonoBehaviour
     {
         if (other.CompareTag("Player") && dialoguePlaying == 0)
         {
-            StartCoroutine(DialogueEvent());
+            CallEventDialogue();
         }
+    }
+
+    public void CallEventDialogue()
+    {
+        StartCoroutine(DialogueEvent());
     }
 
 
