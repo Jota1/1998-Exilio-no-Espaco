@@ -3318,7 +3318,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
       propertyPath: m_Name
-      value: Fusivel
+      value: "Fus\xEDvel 3"
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
@@ -7729,7 +7729,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268250521}
-  m_LocalRotation: {x: 0.025509482, y: -0.7734463, z: 0.031189341, w: 0.6325799}
+  m_LocalRotation: {x: 0.025509482, y: -0.7734463, z: 0.031189337, w: 0.63258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -24601,7 +24601,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823231603}
-  m_LocalRotation: {x: 0.020932408, y: -0.77365166, z: 0.025593787, w: 0.63274795}
+  m_LocalRotation: {x: 0.02093241, y: -0.77365166, z: 0.02559379, w: 0.6327479}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -26933,7 +26933,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
       propertyPath: m_Name
-      value: Fusivel (1)
+      value: "Fus\xEDvel 2"
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
@@ -47271,7 +47271,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: a65976f049330904193092eaa0e8f693,
         type: 3}
       propertyPath: m_Name
-      value: ChavedeFenda
+      value: Ferramenta
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: a65976f049330904193092eaa0e8f693,
         type: 3}
@@ -54323,7 +54323,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
       propertyPath: m_Name
-      value: Fusivel (1)
+      value: "Fus\xEDvel 1"
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
@@ -61397,8 +61397,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.02322139, y: -0.7735539, z: 0.0283924, w: 0.6326681}
-  m_LocalPosition: {x: 0.07411766, y: -0.08383, z: 0.015001774}
+  m_LocalRotation: {x: 0.038738236, y: -0.7726244, z: 0.04736462, w: 0.63190776}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 861425628}
