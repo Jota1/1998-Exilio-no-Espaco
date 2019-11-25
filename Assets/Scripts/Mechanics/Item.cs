@@ -50,6 +50,12 @@ public class Item : MonoBehaviour, IInteract
             UIController.templateCount = 1;
         }
 
+        // Puzzle 3
+        if (nameItem == "Circuito")
+        {
+            UIController.circuitoCount = 1;
+        }
+
 
     }
 
@@ -59,6 +65,8 @@ public class Item : MonoBehaviour, IInteract
         if ((FindObjectOfType<Inventory>().CheckCondition(condition) || condition == "") && puzzleNumber == FindObjectOfType<PuzzleController>().puzzleOrder && !colectItem)
         {
             colectItem = true;
+
+            CheckItemCollect();
 
             // Adiciona no inventário
             FindObjectOfType<Inventory>().itemList.Add(gameObject.GetComponent<Item>());

@@ -15,7 +15,7 @@ public class Cheat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             player.transform.position = sala1.position;
-            FindObjectOfType<PuzzleController>().puzzleOrder = 0;
+            FindObjectOfType<PuzzleController>().puzzleOrder = 1;
             FindObjectOfType<UIController>().actualPuzzle = 1;
             FindObjectOfType<Inventory>().ClearList();
         }
@@ -23,7 +23,7 @@ public class Cheat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             player.transform.position = sala2.position;
-            FindObjectOfType<PuzzleController>().puzzleOrder = 1;
+            FindObjectOfType<PuzzleController>().puzzleOrder = 2;
             FindObjectOfType<UIController>().actualPuzzle = 2;
             FindObjectOfType<Inventory>().ClearList();
         }
@@ -31,7 +31,7 @@ public class Cheat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             player.transform.position = sala3.position;
-            FindObjectOfType<PuzzleController>().puzzleOrder = 2;
+            FindObjectOfType<PuzzleController>().puzzleOrder = 3;
             FindObjectOfType<UIController>().actualPuzzle = 3;
             FindObjectOfType<Inventory>().ClearList();
         }

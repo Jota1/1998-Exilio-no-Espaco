@@ -3131,11 +3131,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 6768797189021581518, guid: 0da351120e7ebc641bc1c09736177745,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: -8030886206861127569, guid: 0da351120e7ebc641bc1c09736177745,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3216,6 +3211,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9b4a338fb10308f41af46fac45aaa70b, type: 2}
+    - target: {fileID: 6768797189021581518, guid: 0da351120e7ebc641bc1c09736177745,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0da351120e7ebc641bc1c09736177745, type: 3}
 --- !u!1001 &137852346
@@ -9781,7 +9781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Disjuntor
   condition: 
-  puzzleNumber: 0
+  puzzleNumber: 1
   disappear: 0
   showInInventory: 0
   colectItem: 0
@@ -25469,7 +25469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameItem: Fusivel 1
   condition: asashaiush
-  puzzleNumber: 0
+  puzzleNumber: 1
   disappear: 0
   showInInventory: 1
   colectItem: 0
@@ -51052,7 +51052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a532e4271b6ab4aa17638ada544382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleOrder: 0
+  puzzleOrder: 1
   timeCounterP3: {fileID: 1050376064}
   timeCounterP3_TEXT: {fileID: 246703479}
   totalTime: 120
@@ -60897,7 +60897,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.03873824, y: -0.77262443, z: 0.047364626, w: 0.63190776}
+  m_LocalRotation: {x: 0.038738236, y: -0.7726245, z: 0.04736463, w: 0.6319077}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
