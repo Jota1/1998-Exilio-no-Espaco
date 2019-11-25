@@ -3131,6 +3131,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 6768797189021581518, guid: 0da351120e7ebc641bc1c09736177745,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -8030886206861127569, guid: 0da351120e7ebc641bc1c09736177745,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3211,11 +3216,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9b4a338fb10308f41af46fac45aaa70b, type: 2}
-    - target: {fileID: 6768797189021581518, guid: 0da351120e7ebc641bc1c09736177745,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0da351120e7ebc641bc1c09736177745, type: 3}
 --- !u!1001 &137852346
@@ -24729,7 +24729,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823231603}
-  m_LocalRotation: {x: 0.02093241, y: -0.77365166, z: 0.02559379, w: 0.6327479}
+  m_LocalRotation: {x: 0.020932404, y: -0.7736517, z: 0.025593787, w: 0.6327479}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -51762,9 +51762,12 @@ MonoBehaviour:
   timeCounterP3_TEXT: {fileID: 246703479}
   totalTime: 120
   doorToPuzzle2: {fileID: 660229426}
+  isSay: 0
+  blockDialogue: 0
   doorToPuzzle3: {fileID: 1262221350}
   finishPuzzle1Dialogue: {fileID: 1786901465}
   finishPuzzle2Dialogue: {fileID: 725550941}
+  dialogueDuringPuzzle2: {fileID: 0}
 --- !u!114 &1677908357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54533,9 +54536,9 @@ MonoBehaviour:
   nameItem: Fusivel 3
   condition: Ferramenta
   puzzleNumber: 1
-  disappear: 0
+  disappear: 1
   showInInventory: 1
-  colectItem: 0
+  colectItem: 1
   positiveFeedback: {fileID: 8300000, guid: 869e9287c39fb1a4b8312b70fdfcea83, type: 3}
   negativeFeedback: {fileID: 8300000, guid: 35bd465e80982d542982ad1c680fc9a4, type: 3}
 --- !u!1001 &1748237253
@@ -61676,7 +61679,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.038738243, y: -0.7726245, z: 0.047364634, w: 0.63190776}
+  m_LocalRotation: {x: 0.03873823, y: -0.7726245, z: 0.04736462, w: 0.6319078}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -63060,7 +63063,7 @@ MonoBehaviour:
   nameItem: Ferramenta
   condition: 
   puzzleNumber: 1
-  disappear: 0
+  disappear: 1
   showInInventory: 1
   colectItem: 0
   positiveFeedback: {fileID: 8300000, guid: cc3b408695f93024cb219c6f32d07fa1, type: 3}
@@ -69432,16 +69435,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Death CAM
       objectReference: {fileID: 0}
-    - target: {fileID: 7799941916590336855, guid: 562aaa9bb7edd124591f4f0e511c49d2,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.data[2].value
-      value: 
-      objectReference: {fileID: 1405134270}
-    - target: {fileID: 7799941916590336855, guid: 562aaa9bb7edd124591f4f0e511c49d2,
-        type: 3}
-      propertyPath: m_SceneBindings.Array.data[3].value
-      value: 
-      objectReference: {fileID: 555441237}
     - target: {fileID: 7799941916590336854, guid: 562aaa9bb7edd124591f4f0e511c49d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69497,5 +69490,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7799941916590336855, guid: 562aaa9bb7edd124591f4f0e511c49d2,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].value
+      value: 
+      objectReference: {fileID: 1405134270}
+    - target: {fileID: 7799941916590336855, guid: 562aaa9bb7edd124591f4f0e511c49d2,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[3].value
+      value: 
+      objectReference: {fileID: 555441237}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 562aaa9bb7edd124591f4f0e511c49d2, type: 3}
