@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     //public GameObject cam_miniPuzzle1;
     public PlayableDirector deathTimeline;
     public static bool isDead;
+    public PlayableDirector PodsTimeline; 
 
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
@@ -282,6 +283,11 @@ public class Player : MonoBehaviour
         {
             startPuzzle3.GetComponent<LoreController>().CallEventDialogue();
             detect_sala_criogenia_P3 = true;
+        }
+
+        if (objCol.tag == "Detect_PODS" /*&& FindObjectOfType<PuzzleController>().puzzleOrder == 3*/)
+        {
+            PodsTimeline.Play();
         }
     }
 
