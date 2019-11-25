@@ -23032,7 +23032,7 @@ Transform:
   - {fileID: 1734417125}
   - {fileID: 1381610172}
   m_Father: {fileID: 1027113660}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &768549726
 BoxCollider:
@@ -25744,10 +25744,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1991200941}
-  - {fileID: 5006512734888279970}
   - {fileID: 1748237254}
   m_Father: {fileID: 1027113660}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &853287104
 BoxCollider:
@@ -25799,9 +25798,9 @@ MonoBehaviour:
   nameItem: Fusivel 1
   condition: asashaiush
   puzzleNumber: 1
-  disappear: 0
+  disappear: 1
   showInInventory: 1
-  colectItem: 0
+  colectItem: 1
   positiveFeedback: {fileID: 8300000, guid: 1f2134cd942490044946612aef571899, type: 3}
   negativeFeedback: {fileID: 0}
 --- !u!1001 &854885946
@@ -28344,7 +28343,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2038784678}
+    m_TransformParent: {fileID: 1027113660}
     m_Modifications:
     - target: {fileID: 3088462297319941520, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
@@ -28359,17 +28358,17 @@ PrefabInstance:
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.77102
+      value: -5.73102
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: -1.6500001
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
@@ -28394,7 +28393,7 @@ PrefabInstance:
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
@@ -31063,8 +31062,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 315485649}
+  - {fileID: 5006512734888279970}
   - {fileID: 853287103}
   - {fileID: 1882154019}
+  - {fileID: 936654711}
   - {fileID: 2038784678}
   - {fileID: 1743190427}
   - {fileID: 768549725}
@@ -54486,7 +54487,7 @@ Transform:
   - {fileID: 1023621706}
   - {fileID: 141959881}
   m_Father: {fileID: 1027113660}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1743190428
 BoxCollider:
@@ -54499,8 +54500,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1502707, y: 0.7748604, z: 2.469413}
-  m_Center: {x: 1.5943662, y: 0.6363449, z: 0.5266999}
+  m_Size: {x: 3.9717696, y: 0.7748604, z: 2.469413}
+  m_Center: {x: 0.6836165, y: 0.6363449, z: 0.5266999}
 --- !u!114 &1743190429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54586,7 +54587,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 77d7a590d0266934aafebfacb99365d6,
         type: 3}
@@ -57751,7 +57752,7 @@ Transform:
   - {fileID: 1885459994}
   - {fileID: 888680719}
   m_Father: {fileID: 1027113660}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1882154020
 BoxCollider:
@@ -61260,7 +61261,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a65976f049330904193092eaa0e8f693,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a65976f049330904193092eaa0e8f693,
         type: 3}
@@ -63010,10 +63011,9 @@ Transform:
   m_Children:
   - {fileID: 627010891}
   - {fileID: 1550262596}
-  - {fileID: 936654711}
   - {fileID: 1987930680}
   m_Father: {fileID: 1027113660}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2038784679
 BoxCollider:
@@ -63045,7 +63045,7 @@ MonoBehaviour:
   puzzleNumber: 1
   disappear: 1
   showInInventory: 1
-  colectItem: 0
+  colectItem: 1
   positiveFeedback: {fileID: 8300000, guid: cc3b408695f93024cb219c6f32d07fa1, type: 3}
   negativeFeedback: {fileID: 0}
 --- !u!1 &2039914740
@@ -68471,7 +68471,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 853287103}
+    m_TransformParent: {fileID: 1027113660}
     m_Modifications:
     - target: {fileID: 3088462297319941520, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
@@ -68486,17 +68486,17 @@ PrefabInstance:
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.47000027
+      value: -2.7600002
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1037784
+      value: -2.9637785
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4489994
+      value: 9.039
       objectReference: {fileID: 0}
     - target: {fileID: 2055670855721539459, guid: a4b8cad6c39ed8b45afc138bcfa8ad6c,
         type: 3}
