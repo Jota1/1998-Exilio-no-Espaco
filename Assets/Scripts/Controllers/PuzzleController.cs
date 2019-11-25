@@ -9,7 +9,7 @@ public class PuzzleController : MonoBehaviour
 
     public static bool endGame;
 
-    // timer
+    // time
     public GameObject timeCounterP3;
     public Text timeCounterP3_TEXT;
     public float totalTime;

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     //FAZER: movimentaçao na gravidade zero ir pra direção que o jogador esta indo    
 {
-    public States state; //estados do jogador    
+    public States state; //estado do jogador    
     Rigidbody rb;
 
     public Transform cam;

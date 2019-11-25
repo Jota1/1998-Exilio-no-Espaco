@@ -49,7 +49,7 @@ public class AIController : MonoBehaviour
         if(onDialogue)
             ShowOption();
 
-        // Calcula o tempo para resolução dos puzzles
+        // Calcula o tempo para resolução dos puzzle
         if (countTime)
         {
             timerPuzzle += Time.deltaTime;

@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
     public static int circuitoCount;
 
     // Start is called before the first frame update
+    // Atualização
     void Start()
     {
         
