@@ -17,12 +17,16 @@ public class PuzzleController : MonoBehaviour
     // Puzzle 2
     public GameObject doorToPuzzle2;
 
+    public bool isSay;
+    public bool blockDialogue;
+
     // Puzzle 3
     public GameObject doorToPuzzle3;
 
     // Dialogos de finalização do puzzle
     public GameObject finishPuzzle1Dialogue;
     public GameObject finishPuzzle2Dialogue;
+    public GameObject dialogueDuringPuzzle2;
 
     void Start()
     {
@@ -36,6 +40,17 @@ public class PuzzleController : MonoBehaviour
         {
             totalTime -= Time.deltaTime;
             TimerPuzzle3(totalTime);
+        }
+
+        UpdateDialogueDuringPuzzle2();
+    }
+
+    void UpdateDialogueDuringPuzzle2()
+    {
+        if(isSay && !blockDialogue && puzzleOrder == 1) 
+        {
+            blockDialogue = true;
+            dialogueDuringPuzzle2.GetComponent<LoreController>().CallEventDialogue();
         }
     }
 
