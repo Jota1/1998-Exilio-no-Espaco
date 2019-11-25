@@ -7851,10 +7851,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueVoice: []
-  dialogueTime: []
+  dialogueAudio: {fileID: 166097891}
+  dialogueVoice:
+  - {fileID: 8300000, guid: 7d2148d9ca2fee5449398f51f250ee84, type: 3}
+  - {fileID: 8300000, guid: b71bcaa56f233e247bbf6403a80e7b2f, type: 3}
+  - {fileID: 8300000, guid: c097666979f5929459afbea5f6ea4f8d, type: 3}
+  - {fileID: 8300000, guid: b3644dcfe25f86b47a4cf316ab6abb40, type: 3}
+  - {fileID: 8300000, guid: e227cd7e92257544a88b7e56615c0aeb, type: 3}
+  dialogueTime:
+  - 5
+  - 4
+  - 5
+  - 4.5
+  - 5
   dialoguePlaying: 0
-  limitTalk: 0
+  limitTalk: 5
 --- !u!1001 &272096598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15830,6 +15841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueAudio: {fileID: 166097891}
   dialogueVoice: []
   dialogueTime: []
   dialoguePlaying: 0
@@ -51383,6 +51395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueAudio: {fileID: 166097891}
   dialogueVoice: []
   dialogueTime: []
   dialoguePlaying: 0
@@ -60948,7 +60961,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.038738236, y: -0.7726245, z: 0.04736463, w: 0.6319077}
+  m_LocalRotation: {x: 0.03873824, y: -0.77262443, z: 0.047364626, w: 0.63190776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -68559,8 +68572,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2169948228385676299, guid: 71c7d5037432f6446accfbef21c639fd, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c7d5037432f6446accfbef21c639fd, type: 3}
 --- !u!4 &7101880339344762237 stripped
 Transform:

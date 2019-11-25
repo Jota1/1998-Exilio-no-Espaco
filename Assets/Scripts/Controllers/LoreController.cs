@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoreController : MonoBehaviour
 {
-    private AudioSource dialogueAudio;
+    public AudioSource dialogueAudio;
 
     public AudioClip[] dialogueVoice;
 
@@ -14,10 +14,6 @@ public class LoreController : MonoBehaviour
 
     public int limitTalk;
 
-    private void Awake()
-    {
-        dialogueAudio = GetComponent<AudioSource>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
