@@ -11,6 +11,7 @@ TagManager:
   - PseudoPortaP2
   - Detect_Sala_Criogenia
   - TuboCriogenia
+  - Detect_PODS
   layers:
   - Default
   - TransparentFX

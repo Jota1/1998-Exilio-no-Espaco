@@ -287,7 +287,7 @@ public class Player : MonoBehaviour
 
         if (objCol.tag == "Detect_PODS" /*&& FindObjectOfType<PuzzleController>().puzzleOrder == 3*/)
         {
-            PodsTimeline.Play();
+            PodsTimeline.Play(); 
         }
     }
 
