@@ -49,7 +49,11 @@ public class Player : MonoBehaviour
         ChangeStates();
 
         if (Input.GetKeyDown(KeyCode.Space) && state == States.grounded)
+        {
             state = States.floating;
+            //comando para setar o tutorial
+            Tutorial.tutoGrvtFinalizado = true;
+        }
         else if (Input.GetKeyDown(KeyCode.Space) && state == States.floating)
             state = States.grounded;
     }
