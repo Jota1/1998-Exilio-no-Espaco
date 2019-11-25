@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public enum States { floating, grounded };
 
@@ -34,8 +36,10 @@ public class Player : MonoBehaviour
 
     [Header("Cameras")]
     public GameObject cam_tubo_criogenia;
-    public GameObject main_CAM; 
+    public GameObject main_CAM;
     //public GameObject cam_miniPuzzle1;
+    public PlayableDirector deathTimeline;
+    public static bool isDead;
 
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
@@ -61,6 +65,15 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space) && state == States.floating)
             state = States.grounded;
+
+        if (isDead)
+        {
+            deathTimeline.Play();
+        }
+
+        //TESTE DE TRIGGER MORTE
+        if (Input.GetKeyDown(KeyCode.N))
+            isDead = true;
     }
 
     void FixedUpdate()
@@ -91,13 +104,17 @@ public class Player : MonoBehaviour
         camF = camF.normalized;
         camR = camR.normalized;
 
-        if (moveDirection.magnitude > 0)
+        if (!isDead)
         {
-            Quaternion lookRotation = Quaternion.LookRotation(camF * moveDirection.y + camR * moveDirection.x);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5 * Time.deltaTime);
+            if (moveDirection.magnitude > 0)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(camF * moveDirection.y + camR * moveDirection.x);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5 * Time.deltaTime);
+            }
         }
 
-        transform.position += (camF * moveDirection.y + camR * moveDirection.x) * Time.deltaTime * speed;
+        if (!isDead)
+                transform.position += (camF * moveDirection.y + camR * moveDirection.x) * Time.deltaTime * speed;
     }   
 
     //movimentação na gravidade zero
