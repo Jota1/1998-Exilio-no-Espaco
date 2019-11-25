@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
+    //OLD
     [SerializeField]
     GameObject firstCam;
     [SerializeField]
@@ -20,11 +21,10 @@ public class CameraSwitcher : MonoBehaviour
    
     void Update()
     {
-        SwitchCam();
-
-        //Debug.Log(camMode);
+        //SwitchCam();        
     }
 
+    //OLD
     void SwitchCam ()
     {
         if (Input.GetKeyDown(KeyCode.C) && camMode == 0)
@@ -42,7 +42,6 @@ public class CameraSwitcher : MonoBehaviour
 
         StartCoroutine(SwitchCamEnum());      
     }
-
     IEnumerator SwitchCamEnum ()
     {
         yield return new WaitForSeconds(0.01f);

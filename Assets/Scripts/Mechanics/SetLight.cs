@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class SetLight : MonoBehaviour, IInteract
 {
-    public bool SetFusiveis1;
-    public bool SetFusiveis2;
-    public bool SetFusiveis3;
-    public bool SetFusiveis4;
-    public bool SetFusiveis5;
+    public static bool SetFusiveis1;
+    public static bool SetFusiveis2;
+    public static bool SetFusiveis3;
+    public static bool SetFusiveis4;
+    public static bool SetFusiveis5;    
 
     public GameObject miniPuzzle;
+    public GameObject miniPuzzleV2; //novo mini puzzle com camera e props
 
     public Image[] lightsFeedback;
 
@@ -83,8 +84,11 @@ public class SetLight : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(!finishMinigame)
+        if (!finishMinigame)
+        {
             miniPuzzle.SetActive(true);
+            miniPuzzleV2.SetActive(true);
+        }
     }
 
     public void FinishSetLight()
@@ -92,6 +96,7 @@ public class SetLight : MonoBehaviour, IInteract
         if(!SetFusiveis1 && !SetFusiveis2 && !SetFusiveis3 && !SetFusiveis4 && !SetFusiveis5 && !finishMinigame)
         {
             miniPuzzle.SetActive(false);
+            miniPuzzleV2.SetActive(false);
             finishMinigame = true;
             FindObjectOfType<Inventory>().itemList.Add(fusivel1);
         }

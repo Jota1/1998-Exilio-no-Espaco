@@ -32,6 +32,11 @@ public class Player : MonoBehaviour
     public Transform checkPoint_SalaP2;
     public Transform checkpoint_SalaGravidade;
 
+    [Header("Cameras")]
+    public GameObject cam_tubo_criogenia;
+    public GameObject main_CAM; 
+    //public GameObject cam_miniPuzzle1;
+
     float mass = 5.0F; //massa do jogador
     Vector3 impact = Vector3.zero; //Impacto ao desligar gravidade
     private Vector3 moveDirection = Vector3.zero;
@@ -211,10 +216,25 @@ public class Player : MonoBehaviour
         impact += dir.normalized * force / mass;
     }
 
+    //Metodo para trocar as cameras quando o jogador entrar em puzzles e corredores
+    void Camera_Switcher(GameObject actual_render_CAM, GameObject old_render_CAM)
+    {
+        actual_render_CAM.SetActive(true);
+        old_render_CAM.SetActive(false);
+    }
+
     #region Colisões
     private void OnTriggerEnter(Collider other)
     {
         GameObject objCol = other.gameObject;
+
+        //MUDANÇAS DE CAMERA - TRIGGERS
+        if (objCol.tag == "TuboCriogenia")
+        {
+            Camera_Switcher(cam_tubo_criogenia, main_CAM);
+            Debug.Log("tubo camara crio");
+        }
+
 
         if (objCol.tag == "PseudoEscada")
         {
@@ -259,7 +279,14 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-   
+        GameObject objCol = other.gameObject;
+
+        //MUDANÇAS DE CAMERA - TRIGGERS
+        if (objCol.tag == "TuboCriogenia")
+        {
+            Camera_Switcher(main_CAM, cam_tubo_criogenia);
+            Debug.Log("tubo camara crio");
+        }
     }
     #endregion
 
