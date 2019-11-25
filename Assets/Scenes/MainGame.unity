@@ -24709,7 +24709,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823231603}
-  m_LocalRotation: {x: 0.02093241, y: -0.77365166, z: 0.02559379, w: 0.6327479}
+  m_LocalRotation: {x: 0.020932417, y: -0.77365166, z: 0.025593786, w: 0.6327479}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -51775,7 +51775,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677908352}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0c6b943a42a73d4a989011a4c7e35fe, type: 3}
   m_Name: 
@@ -61771,7 +61771,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.038738236, y: -0.7726244, z: 0.04736462, w: 0.63190776}
+  m_LocalRotation: {x: 0.03873824, y: -0.7726245, z: 0.047364634, w: 0.63190776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -66259,6 +66259,12 @@ MonoBehaviour:
   colectItem: 0
   positiveFeedback: {fileID: 8300000, guid: d388ac098dd4a9d468760d0b82d11620, type: 3}
   negativeFeedback: {fileID: 8300000, guid: aeadc4b74896ff44ea2e1dc8bfe24391, type: 3}
+--- !u!320 &2146021063 stripped
+PlayableDirector:
+  m_CorrespondingSourceObject: {fileID: 6611400590064614444, guid: 97b675386c3eff74f802b207235cf7a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1805835106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &310467162768294395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69277,6 +69283,11 @@ PrefabInstance:
       propertyPath: startPuzzle3
       value: 
       objectReference: {fileID: 742847137}
+    - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: PodsTimeline
+      value: 
+      objectReference: {fileID: 2146021063}
     - target: {fileID: 5198806393719017432, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}
       propertyPath: m_LocalPosition.x
