@@ -250,11 +250,11 @@ public class Player : MonoBehaviour
         GameObject objCol = other.gameObject;
 
         //MUDANÇAS DE CAMERA - TRIGGERS
-        if (objCol.tag == "TuboCriogenia")
+       /* if (objCol.tag == "TuboCriogenia")
         {
             Camera_Switcher(cam_tubo_criogenia, main_CAM);
             Debug.Log("tubo camara crio");
-        }
+        }*/
 
 
         if (objCol.tag == "PseudoEscada")
