@@ -20,7 +20,7 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(CheckCondition() && FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber)
+        if(CheckCondition() && FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber && Disjuntor.fusiveisColocados)
             voltimeterController.ActiveVoltimeter();
     }
 
