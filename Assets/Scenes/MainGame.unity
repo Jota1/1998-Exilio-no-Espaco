@@ -9721,7 +9721,6 @@ GameObject:
   - component: {fileID: 315485650}
   - component: {fileID: 315485651}
   - component: {fileID: 315485652}
-  - component: {fileID: 315485653}
   m_Layer: 0
   m_Name: 1
   m_TagString: Interagivel
@@ -9771,6 +9770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0580f478f556d4a8df9bd0112f06e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleNumber: 1
   positiveFeedback: {fileID: 8300000, guid: 6838119eac98d7449936e600851eaa98, type: 3}
   negativeFeedback: {fileID: 8300000, guid: 55f70757bcf67d64bb3a49efb1a79b10, type: 3}
 --- !u!114 &315485652
@@ -9794,27 +9794,7 @@ MonoBehaviour:
   - {fileID: 276174597}
   - {fileID: 677342017}
   finishMinigame: 0
-  disjuntor: {fileID: 315485653}
---- !u!114 &315485653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315485648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72cc8ba60f9717e479ca7bc614820f7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameItem: Disjuntor
-  condition: 
-  puzzleNumber: 1
-  disappear: 0
-  showInInventory: 0
-  colectItem: 0
-  positiveFeedback: {fileID: 0}
-  negativeFeedback: {fileID: 0}
+  disjuntor: {fileID: 0}
 --- !u!1001 &321580030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51762,9 +51742,12 @@ MonoBehaviour:
   timeCounterP3_TEXT: {fileID: 246703479}
   totalTime: 120
   doorToPuzzle2: {fileID: 660229426}
+  isSay: 0
+  blockDialogue: 0
   doorToPuzzle3: {fileID: 1262221350}
   finishPuzzle1Dialogue: {fileID: 1786901465}
   finishPuzzle2Dialogue: {fileID: 725550941}
+  dialogueDuringPuzzle2: {fileID: 0}
 --- !u!114 &1677908357
 MonoBehaviour:
   m_ObjectHideFlags: 0

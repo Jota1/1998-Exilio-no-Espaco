@@ -7,6 +7,9 @@ public class Disjuntor : MonoBehaviour, IInteract
     public PuzzleController puzzleController { get; set; }
 
     public static bool forceRestore;
+    public static bool fusiveisColocados;
+
+    public int puzzleNumber;
 
     // Feedbacks
     public AudioClip positiveFeedback;
@@ -17,18 +20,25 @@ public class Disjuntor : MonoBehaviour, IInteract
         puzzleController = FindObjectOfType<PuzzleController>();
 
         forceRestore = false;
+
+        fusiveisColocados = false;
     }
 
     public void Interaction()
     {
-        if (forceRestore && FindObjectOfType<Inventory>().CheckCondition("Fusivel 1") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 2") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 3"))
+        if (FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber)
         {
-            Feedback(positiveFeedback);
-            puzzleController.FinishPuzzle1();
-        }
-        else
-        {
-            Feedback(negativeFeedback);
+
+            if (forceRestore && fusiveisColocados && FindObjectOfType<Inventory>().CheckCondition("Fusivel 1") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 2") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 3"))
+            {
+                Feedback(positiveFeedback);
+                puzzleController.FinishPuzzle1();
+            }
+            else
+            {
+                Feedback(negativeFeedback);
+            }
+
         }
     }
 

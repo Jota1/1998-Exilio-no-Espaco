@@ -62,7 +62,7 @@ public class SetFusiveis : MonoBehaviour
 
     public void Interaction()
     {
-        if (!finishMinigame)
+        if (!finishMinigame && FindObjectOfType<Inventory>().CheckCondition("Fusivel 1") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 2") && FindObjectOfType<Inventory>().CheckCondition("Fusivel 3"))
             miniPuzzle.SetActive(true);
     }
 
@@ -72,6 +72,7 @@ public class SetFusiveis : MonoBehaviour
         {
             miniPuzzle.SetActive(false);
             finishMinigame = true;
+            Disjuntor.fusiveisColocados = true;
             FindObjectOfType<Inventory>().itemList.Add(disjuntor);
         }
     }
