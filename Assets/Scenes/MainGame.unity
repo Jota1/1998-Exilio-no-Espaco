@@ -7790,6 +7790,7 @@ GameObject:
   - component: {fileID: 269425556}
   - component: {fileID: 269425555}
   - component: {fileID: 269425554}
+  - component: {fileID: 269425557}
   m_Layer: 0
   m_Name: TriggerDoor
   m_TagString: Untagged
@@ -7838,6 +7839,22 @@ Transform:
   m_Father: {fileID: 1677908354}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269425557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269425553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueVoice: []
+  dialogueTime: []
+  dialoguePlaying: 0
+  limitTalk: 0
 --- !u!1001 &272096598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15752,6 +15769,7 @@ GameObject:
   - component: {fileID: 527961174}
   - component: {fileID: 527961173}
   - component: {fileID: 527961172}
+  - component: {fileID: 527961175}
   m_Layer: 0
   m_Name: TriggerDoor 3
   m_TagString: Untagged
@@ -15800,6 +15818,22 @@ Transform:
   m_Father: {fileID: 1677908354}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527961175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527961171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueVoice: []
+  dialogueTime: []
+  dialoguePlaying: 0
+  limitTalk: 0
 --- !u!1001 &528078906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51288,6 +51322,7 @@ GameObject:
   - component: {fileID: 1678575943}
   - component: {fileID: 1678575942}
   - component: {fileID: 1678575941}
+  - component: {fileID: 1678575944}
   m_Layer: 0
   m_Name: TriggerDoor 2
   m_TagString: Untagged
@@ -51336,6 +51371,22 @@ Transform:
   m_Father: {fileID: 1677908354}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1678575944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678575940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueVoice: []
+  dialogueTime: []
+  dialoguePlaying: 0
+  limitTalk: 0
 --- !u!1001 &1678730633
 PrefabInstance:
   m_ObjectHideFlags: 0
