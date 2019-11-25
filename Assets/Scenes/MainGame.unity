@@ -3131,11 +3131,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 6768797189021581518, guid: 0da351120e7ebc641bc1c09736177745,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: -8030886206861127569, guid: 0da351120e7ebc641bc1c09736177745,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3216,6 +3211,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9b4a338fb10308f41af46fac45aaa70b, type: 2}
+    - target: {fileID: 6768797189021581518, guid: 0da351120e7ebc641bc1c09736177745,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0da351120e7ebc641bc1c09736177745, type: 3}
 --- !u!1001 &137852346
@@ -7672,6 +7672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 1
   obj: {fileID: 1521662465}
+  door1: 1
+  door2: 0
 --- !u!65 &269425555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15716,7 +15718,6 @@ GameObject:
   - component: {fileID: 527961174}
   - component: {fileID: 527961173}
   - component: {fileID: 527961172}
-  - component: {fileID: 527961175}
   m_Layer: 0
   m_Name: TriggerDoor 3
   m_TagString: Untagged
@@ -15738,6 +15739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 1
   obj: {fileID: 1262221350}
+  door1: 0
+  door2: 0
 --- !u!65 &527961173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15765,23 +15768,6 @@ Transform:
   m_Father: {fileID: 1677908354}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &527961175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527961171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueAudio: {fileID: 166097891}
-  dialogueVoice: []
-  dialogueTime: []
-  dialoguePlaying: 0
-  limitTalk: 0
 --- !u!1001 &528078906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51552,7 +51538,6 @@ GameObject:
   - component: {fileID: 1678575943}
   - component: {fileID: 1678575942}
   - component: {fileID: 1678575941}
-  - component: {fileID: 1678575944}
   m_Layer: 0
   m_Name: TriggerDoor 2
   m_TagString: Untagged
@@ -51574,6 +51559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 1
   obj: {fileID: 660229426}
+  door1: 1
+  door2: 0
 --- !u!65 &1678575942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51601,23 +51588,6 @@ Transform:
   m_Father: {fileID: 1677908354}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1678575944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678575940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e75351884fcee40b39f6ec21cd0e8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueAudio: {fileID: 166097891}
-  dialogueVoice: []
-  dialogueTime: []
-  dialoguePlaying: 0
-  limitTalk: 0
 --- !u!1001 &1678730633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52769,6 +52739,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: CAROLINEPORRA@Idle
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: f3f4f5d0bbb803d41a6bc054f203676e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f9e79674dc4fade468504dd13765b713, type: 2}
+    - target: {fileID: -8141055135697147976, guid: f3f4f5d0bbb803d41a6bc054f203676e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cf1e8cbf1e6b76468b771097bcc2476, type: 2}
+    - target: {fileID: -7287911475041002835, guid: f3f4f5d0bbb803d41a6bc054f203676e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca707943bc77e04478815c0999965bc2, type: 2}
+    - target: {fileID: -6967823109561505645, guid: f3f4f5d0bbb803d41a6bc054f203676e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 950b8929314a65948ad72a57541460a5, type: 2}
     - target: {fileID: -4216859302048453862, guid: f3f4f5d0bbb803d41a6bc054f203676e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52824,26 +52814,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: f3f4f5d0bbb803d41a6bc054f203676e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f9e79674dc4fade468504dd13765b713, type: 2}
-    - target: {fileID: -8141055135697147976, guid: f3f4f5d0bbb803d41a6bc054f203676e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2cf1e8cbf1e6b76468b771097bcc2476, type: 2}
-    - target: {fileID: -7287911475041002835, guid: f3f4f5d0bbb803d41a6bc054f203676e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ca707943bc77e04478815c0999965bc2, type: 2}
-    - target: {fileID: -6967823109561505645, guid: f3f4f5d0bbb803d41a6bc054f203676e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 950b8929314a65948ad72a57541460a5, type: 2}
     - target: {fileID: 980295269328462080, guid: f3f4f5d0bbb803d41a6bc054f203676e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -66359,6 +66329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6cb6a4b7d250c34b8011946e627ff61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuInGame: {fileID: 0}
 --- !u!114 &3952779580639709144 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 968896247096511639, guid: 7e56a1685e3f3624fb3c89d7f207fc6f,

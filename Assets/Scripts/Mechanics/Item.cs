@@ -89,6 +89,7 @@ public class Item : MonoBehaviour, IInteract
     void Feedback(AudioClip feedback)
     {
         // Toca som
+        FindObjectOfType<SoundController>().playerAudio.Stop();
         FindObjectOfType<SoundController>().PlaySFX(feedback);
     }
 

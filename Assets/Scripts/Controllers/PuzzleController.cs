@@ -60,6 +60,7 @@ public class PuzzleController : MonoBehaviour
         finishPuzzle1Dialogue.GetComponent<LoreController>().CallEventDialogue();
         puzzleOrder++;
         doorToPuzzle2.SetActive(false);
+        FindObjectOfType<AIController>().DisableTimer();
     }
 
     public void FinishPuzzle2()
@@ -68,6 +69,7 @@ public class PuzzleController : MonoBehaviour
         finishPuzzle2Dialogue.GetComponent<LoreController>().CallEventDialogue();
         puzzleOrder++;
         doorToPuzzle3.SetActive(false);
+        FindObjectOfType<AIController>().DisableTimer();
     }
 
     public void FinishPuzzle3()

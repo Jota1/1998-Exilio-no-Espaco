@@ -282,6 +282,7 @@ public class Player : MonoBehaviour
         if (objCol.tag == "Detect_Sala_Criogenia" && FindObjectOfType<PuzzleController>().puzzleOrder == 3)
         {
             startPuzzle3.GetComponent<LoreController>().CallEventDialogue();
+            AIController.calculateTime = true;
             detect_sala_criogenia_P3 = true;
         }
 

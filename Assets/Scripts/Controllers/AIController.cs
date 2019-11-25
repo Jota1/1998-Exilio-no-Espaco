@@ -41,7 +41,10 @@ public class AIController : MonoBehaviour
 
             timeCompletePuzzle[choicePuzzle] = timerPuzzle;
 
-        }  
+        }  else
+        {
+            timerPuzzle = 0;
+        }
 
     }
 
