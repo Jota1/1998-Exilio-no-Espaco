@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject menuInGame;
 
     public void ChangeScene(string sceneName)
     {
@@ -17,4 +18,9 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void ExitMenuInGame ()
+    {
+        menuInGame.SetActive(false);
+        Time.timeScale = 1;
+    }
 }
