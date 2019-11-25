@@ -5,28 +5,12 @@ using UnityEngine.UI;
 
 public class AIController : MonoBehaviour
 {
-    [Header("Text Question")]
-    public GameObject optionDialogue;
-
-    public Text textQuestion;
-    public Text textAnswerGood;
-    public Text textAnswerBad;
-
-    public string[] question;
-    public string[] answerGood;
-    public string[] answerBad;
-
-    public bool onDialogue;
 
     [Header("Calculo AI")]
-    // Escolhas
-    public float choices;
-    public int choicesAnswer;
-    public int timeToChoices;
-
-    public bool setChoice;
-
     // Calculo para decisão
+    public int choicePuzzle;
+    public static bool calculateTime;
+
     public float[] minTime;
     public float[] timeCompletePuzzle;
 
@@ -36,28 +20,28 @@ public class AIController : MonoBehaviour
 
     public bool countTime;
 
-    
-
     void Start()
     {
-        choices = 0;    
+        calculateTime = false;    
     }
 
     void Update()
     {
-        // Mostra perguntas de Hal
-        if(onDialogue)
-            ShowOption();
+
+        if (calculateTime)
+        {
+            calculateTime = false;
+            ReactChoice();
+        }
 
         // Calcula o tempo para resolução dos puzzle
         if (countTime)
         {
             timerPuzzle += Time.deltaTime;
 
-            timeCompletePuzzle[choicesAnswer] = timerPuzzle;
+            timeCompletePuzzle[choicePuzzle] = timerPuzzle;
 
         }  
-
 
     }
 
@@ -71,33 +55,9 @@ public class AIController : MonoBehaviour
         countTime = false;
     }
 
-    void ShowOption()
-    {
-        textQuestion.text = question[choicesAnswer];
-        textAnswerGood.text = answerGood[choicesAnswer];
-        textAnswerBad.text = answerBad[choicesAnswer];
-
-        optionDialogue.SetActive(true);
-        onDialogue = false;
-    }
-
-    void CalculateChoices()
-    {
-        if(choices < timeToChoices / 2)
-        {
-            setChoice = false;
-        } else
-        {
-            setChoice = true;
-        }
-    }
-
     public void ReactChoice()
     {
-        CalculateChoices();
 
-        if (!setChoice)
-        {
             float media = 0;
 
             for (int i = 0; i < timeCompletePuzzle.Length; i++)
@@ -107,34 +67,7 @@ public class AIController : MonoBehaviour
 
             media /= timeCompletePuzzle.Length;
 
-            FindObjectOfType<PuzzleController>().totalTime = minTime[2] + media * choices;
-        } 
-
-    }
-
-    public void GoodChoice()
-    {
-        choices += 0.5f;
-        choicesAnswer++;
-
-        onDialogue = false;
-
-        if (choicesAnswer == timeToChoices)
-            ReactChoice();
-    }
-
-    public void BadChoice()
-    {
-        if (choices > 0)
-            choices -= 0.5f;
-        else
-            choices = 0f;
-
-        choicesAnswer++;
-
-        onDialogue = false;
-
-        if (choicesAnswer == timeToChoices)
-            ReactChoice();
+            FindObjectOfType<PuzzleController>().totalTime = minTime[2] + media;
+        
     }
 }

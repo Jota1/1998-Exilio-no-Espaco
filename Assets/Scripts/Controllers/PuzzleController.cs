@@ -57,7 +57,6 @@ public class PuzzleController : MonoBehaviour
     public void FinishPuzzle1()
     {
         FindObjectOfType<Inventory>().ClearList();
-        FindObjectOfType<AIController>().onDialogue = true;
         finishPuzzle1Dialogue.GetComponent<LoreController>().CallEventDialogue();
         puzzleOrder++;
         doorToPuzzle2.SetActive(false);
@@ -66,7 +65,6 @@ public class PuzzleController : MonoBehaviour
     public void FinishPuzzle2()
     {
         FindObjectOfType<Inventory>().ClearList();
-        FindObjectOfType<AIController>().onDialogue = true;
         finishPuzzle2Dialogue.GetComponent<LoreController>().CallEventDialogue();
         puzzleOrder++;
         doorToPuzzle3.SetActive(false);
