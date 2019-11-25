@@ -68642,6 +68642,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gameplay Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2169948228385676407, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169948228385676407, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169948228385676407, guid: 71c7d5037432f6446accfbef21c639fd,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}
       propertyPath: checkPoint_SalaP2
