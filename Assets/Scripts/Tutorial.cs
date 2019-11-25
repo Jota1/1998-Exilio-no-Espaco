@@ -45,10 +45,10 @@ public class Tutorial : MonoBehaviour
             wasdCounter++;
         }
 
-        if (wasdCounter >= 800)
+        if (wasdCounter >= 400)
         {
             tutoMovFinalizado = true;
-            dialogo_TXT_Tutorial.text = "Segure 'espaço' e clique em 'Desligar Gravidade'";
+            dialogo_TXT_Tutorial.text = "Aperte'Espaço' para desligar gravidade";
 
             Debug.Log("Tuto mov finalizado");
         }
