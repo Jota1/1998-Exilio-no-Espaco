@@ -18,6 +18,7 @@ public class Cheat : MonoBehaviour
             FindObjectOfType<PuzzleController>().puzzleOrder = 1;
             FindObjectOfType<UIController>().actualPuzzle = 1;
             FindObjectOfType<Inventory>().ClearList();
+            Disjuntor.fusiveisColocados = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -26,6 +27,7 @@ public class Cheat : MonoBehaviour
             FindObjectOfType<PuzzleController>().puzzleOrder = 2;
             FindObjectOfType<UIController>().actualPuzzle = 2;
             FindObjectOfType<Inventory>().ClearList();
+            Disjuntor.fusiveisColocados = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -34,6 +36,7 @@ public class Cheat : MonoBehaviour
             FindObjectOfType<PuzzleController>().puzzleOrder = 3;
             FindObjectOfType<UIController>().actualPuzzle = 3;
             FindObjectOfType<Inventory>().ClearList();
+            Disjuntor.fusiveisColocados = true;
         }
     }
 }

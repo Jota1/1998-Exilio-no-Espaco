@@ -9770,6 +9770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0580f478f556d4a8df9bd0112f06e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  voltimeterPuzzle: {fileID: 768549727}
   puzzleNumber: 1
   miniGame: {fileID: 159068319}
   positiveFeedback: {fileID: 8300000, guid: 6838119eac98d7449936e600851eaa98, type: 3}
@@ -23063,6 +23064,7 @@ MonoBehaviour:
   - Fusivel 1
   - Fusivel 2
   puzzleNumber: 1
+  forceRestore: 0
 --- !u!1 &771669879
 GameObject:
   m_ObjectHideFlags: 0
@@ -31432,6 +31434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
         type: 3}
+      propertyPath: voltimeterObj.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
       propertyPath: voltimeterBar
       value: 
       objectReference: {fileID: 1868347526}
@@ -31445,6 +31452,21 @@ PrefabInstance:
       propertyPath: negativeFeedback
       value: 
       objectReference: {fileID: 8300000, guid: d8d1ae6c1ee44774a8b7bbd3a14fc01d, type: 3}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
+      propertyPath: voltimeterObj.Array.data[1]
+      value: 
+      objectReference: {fileID: 4581150985756163066}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
+      propertyPath: voltimeterObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 768549727}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
+      propertyPath: voltimeterObj.Array.data[2]
+      value: 
+      objectReference: {fileID: 1359694632}
     - target: {fileID: 616052117738338237, guid: 8e36d89f4472f3d459a41f178d6f9589,
         type: 3}
       propertyPath: m_IsActive
@@ -41653,6 +41675,7 @@ MonoBehaviour:
   condition:
   - Circuito
   puzzleNumber: 3
+  forceRestore: 0
 --- !u!1001 &1360776814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67614,6 +67637,7 @@ MonoBehaviour:
   - "Fia\xE7ao"
   - Template
   puzzleNumber: 2
+  forceRestore: 0
 --- !u!4 &4581150985800124108
 Transform:
   m_ObjectHideFlags: 0

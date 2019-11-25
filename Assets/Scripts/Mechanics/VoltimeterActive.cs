@@ -12,6 +12,8 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public int puzzleNumber;
 
+    public bool forceRestore;
+
     void Awake()
     {
         voltimeterController = FindObjectOfType<Voltimeter>();
@@ -20,7 +22,7 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public void Interaction()
     {
-        if(CheckCondition() && FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber && Disjuntor.fusiveisColocados && !Disjuntor.forceRestore)
+        if(CheckCondition() && FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber && Disjuntor.fusiveisColocados && !forceRestore)
             voltimeterController.ActiveVoltimeter();
     }
 

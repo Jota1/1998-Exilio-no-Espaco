@@ -6,8 +6,9 @@ public class Disjuntor : MonoBehaviour, IInteract
 {
     public PuzzleController puzzleController { get; set; }
 
-    public static bool forceRestore;
     public static bool fusiveisColocados;
+
+    public VoltimeterActive voltimeterPuzzle;
 
     public int puzzleNumber;
     public GameObject miniGame;
@@ -19,8 +20,6 @@ public class Disjuntor : MonoBehaviour, IInteract
     void Awake()
     {
         puzzleController = FindObjectOfType<PuzzleController>();
-
-        forceRestore = false;
 
         fusiveisColocados = false;
     }
@@ -34,7 +33,7 @@ public class Disjuntor : MonoBehaviour, IInteract
                 miniGame.SetActive(true);
             }
 
-            if (forceRestore && fusiveisColocados)
+            if (voltimeterPuzzle.forceRestore && fusiveisColocados)
             {
                 Feedback(positiveFeedback);
                 puzzleController.FinishPuzzle1();

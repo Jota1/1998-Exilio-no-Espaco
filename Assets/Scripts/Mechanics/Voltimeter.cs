@@ -8,6 +8,8 @@ public class Voltimeter : MonoBehaviour
     public Scrollbar voltimeter;
     public Scrollbar randomMark;
 
+    public VoltimeterActive[] voltimeterObj;
+
     public GameObject voltimeterBar;
 
     public float randomValue;
@@ -121,16 +123,22 @@ public class Voltimeter : MonoBehaviour
         voltimeterBar.SetActive(false);
         countRights = 0;
         completeMinigame = true;
-        Disjuntor.forceRestore = true;
+
+        if (FindObjectOfType<PuzzleController>().puzzleOrder == 1)
+        {
+            voltimeterObj[0].forceRestore = true;
+        }
 
         // Finish Puzzles
-        if(FindObjectOfType<PuzzleController>().puzzleOrder == 2)
+        if (FindObjectOfType<PuzzleController>().puzzleOrder == 2)
         {
+            voltimeterObj[1].forceRestore = true;
             FindObjectOfType<PuzzleController>().FinishPuzzle2();
         }
 
         if (FindObjectOfType<PuzzleController>().puzzleOrder == 3)
         {
+            voltimeterObj[2].forceRestore = true;
             FindObjectOfType<PuzzleController>().FinishPuzzle3();
         }
     }
