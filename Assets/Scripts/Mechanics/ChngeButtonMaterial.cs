@@ -18,31 +18,31 @@ public class ChngeButtonMaterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SetLight.SetFusiveis1)
+        if (SetLight.SetLights1)
         { 
             button1_Render.material.SetColor("_Color", Color.green);
         }
         else { button1_Render.material.SetColor("_Color", Color.red); }
 
-        if (SetLight.SetFusiveis2)
+        if (SetLight.SetLights2)
         {
             button2_Render.material.SetColor("_Color", Color.green);
         }
         else { button2_Render.material.SetColor("_Color", Color.red); }
 
-        if (SetLight.SetFusiveis3)
+        if (SetLight.SetLights3)
         {
             button3_Render.material.SetColor("_Color", Color.green);
         }
         else { button3_Render.material.SetColor("_Color", Color.red); }
 
-        if (SetLight.SetFusiveis4)
+        if (SetLight.SetLights4)
         {
             button4_Render.material.SetColor("_Color", Color.green);
         }
         else { button4_Render.material.SetColor("_Color", Color.red); }
 
-        if (SetLight.SetFusiveis5)
+        if (SetLight.SetLights5)
         {
             button5_Render.material.SetColor("_Color", Color.green);
         }
