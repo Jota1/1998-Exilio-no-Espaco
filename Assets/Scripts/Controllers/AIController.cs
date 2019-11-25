@@ -65,7 +65,10 @@ public class AIController : MonoBehaviour
 
             for (int i = 0; i < timeCompletePuzzle.Length; i++)
             {
-                media += timeCompletePuzzle[i];
+
+                float dif = timeCompletePuzzle[i] - minTime[i];
+                
+                media += dif;
             }
 
             media /= timeCompletePuzzle.Length;
