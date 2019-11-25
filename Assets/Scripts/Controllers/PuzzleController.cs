@@ -17,13 +17,16 @@ public class PuzzleController : MonoBehaviour
     // Puzzle 2
     public GameObject doorToPuzzle2;
 
+    public bool isSay;
+    public bool blockDialogue;
+
     // Puzzle 3
     public GameObject doorToPuzzle3;
 
     // Dialogos de finalização do puzzle
     public GameObject finishPuzzle1Dialogue;
     public GameObject finishPuzzle2Dialogue;
-    public GameObject finishPuzzle3Dialogue;
+    public GameObject dialogueDuringPuzzle2;
 
     void Start()
     {
@@ -37,6 +40,17 @@ public class PuzzleController : MonoBehaviour
         {
             totalTime -= Time.deltaTime;
             TimerPuzzle3(totalTime);
+        }
+
+        UpdateDialogueDuringPuzzle2();
+    }
+
+    void UpdateDialogueDuringPuzzle2()
+    {
+        if(isSay && !blockDialogue && puzzleOrder == 1) 
+        {
+            blockDialogue = true;
+            dialogueDuringPuzzle2.GetComponent<LoreController>().CallEventDialogue();
         }
     }
 
@@ -53,7 +67,7 @@ public class PuzzleController : MonoBehaviour
     {
         FindObjectOfType<Inventory>().ClearList();
         FindObjectOfType<AIController>().onDialogue = true;
-        finishPuzzle1Dialogue.GetComponent<LoreController>().CallEventDialogue();
+        finishPuzzle2Dialogue.GetComponent<LoreController>().CallEventDialogue();
         puzzleOrder++;
         doorToPuzzle3.SetActive(false);
     }
@@ -61,7 +75,6 @@ public class PuzzleController : MonoBehaviour
     public void FinishPuzzle3()
     {
         FindObjectOfType<Inventory>().ClearList();
-        finishPuzzle1Dialogue.GetComponent<LoreController>().CallEventDialogue();
         endGame = true;
     }
 

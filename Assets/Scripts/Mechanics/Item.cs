@@ -43,11 +43,13 @@ public class Item : MonoBehaviour, IInteract
         if (nameItem == "Fiaçao")
         {
             UIController.fiacaoCount = 1;
+            FindObjectOfType<PuzzleController>().isSay = true;
         }
 
         if (nameItem == "Template")
         {
             UIController.templateCount = 1;
+            FindObjectOfType<PuzzleController>().isSay = true;
         }
 
         // Puzzle 3

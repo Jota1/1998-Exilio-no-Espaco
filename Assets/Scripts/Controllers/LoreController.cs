@@ -33,6 +33,7 @@ public class LoreController : MonoBehaviour
     {
         while(dialoguePlaying < limitTalk)
         {
+            dialogueAudio.Stop();
             dialogueAudio.PlayOneShot(dialogueVoice[dialoguePlaying]);
             yield return new WaitForSeconds(dialogueTime[dialoguePlaying]);
             dialoguePlaying++;

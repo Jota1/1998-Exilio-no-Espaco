@@ -47,6 +47,9 @@ public class Player : MonoBehaviour
 
     public static bool detect_sala_criogenia_P3;
 
+    [Header("Dialogos com Hal")]
+    public GameObject startPuzzle3;
+
     void Start()
     {        
         rb = GetComponent<Rigidbody>();
@@ -277,6 +280,7 @@ public class Player : MonoBehaviour
 
         if (objCol.tag == "Detect_Sala_Criogenia")
         {
+            startPuzzle3.GetComponent<LoreController>().CallEventDialogue();
             detect_sala_criogenia_P3 = true;
         }
     }
