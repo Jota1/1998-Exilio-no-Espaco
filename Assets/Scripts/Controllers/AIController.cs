@@ -74,6 +74,10 @@ public class AIController : MonoBehaviour
             media /= timeCompletePuzzle.Length;
 
             FindObjectOfType<PuzzleController>().totalTime = minTime[2] + media;
-        
+
+        if (FindObjectOfType<PuzzleController>().totalTime < minTime[2])
+            FindObjectOfType<PuzzleController>().totalTime = minTime[2];
+
+
     }
 }
