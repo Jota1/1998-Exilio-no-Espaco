@@ -36,7 +36,7 @@ public class PuzzleController : MonoBehaviour
 
     void Update()
     {
-        if (puzzleOrder == 2 && !endGame && Player.detect_sala_criogenia_P3)
+        if (puzzleOrder == 3 && !endGame && Player.detect_sala_criogenia_P3)
         {
             totalTime -= Time.deltaTime;
             TimerPuzzle3(totalTime);
