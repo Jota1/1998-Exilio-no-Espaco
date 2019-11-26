@@ -286,7 +286,7 @@ public class Player : MonoBehaviour
             detect_sala_criogenia_P3 = true;
         }
 
-        if (objCol.tag == "Detect_PODS" && FindObjectOfType<PuzzleController>().puzzleOrder == 3)
+        if (objCol.tag == "Detect_PODS" && FindObjectOfType<PuzzleController>().puzzleOrder == 3 && PuzzleController.endGame)
         {
             PodsTimeline.Play(); 
         }
