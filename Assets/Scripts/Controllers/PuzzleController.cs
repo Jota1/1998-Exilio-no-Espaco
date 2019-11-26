@@ -102,6 +102,7 @@ public class PuzzleController : MonoBehaviour
         {
             //acaba puzzle
             Debug.Log("morreu p3");
+            Player.isDead = true;
         }
     }
 }
