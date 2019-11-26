@@ -41,7 +41,10 @@ public class AIController : MonoBehaviour
 
             timeCompletePuzzle[choicePuzzle] = timerPuzzle;
 
-        }  
+        }  else
+        {
+            timerPuzzle = 0;
+        }
 
     }
 
@@ -62,7 +65,10 @@ public class AIController : MonoBehaviour
 
             for (int i = 0; i < timeCompletePuzzle.Length; i++)
             {
-                media += timeCompletePuzzle[i];
+
+                float dif = timeCompletePuzzle[i] - minTime[i];
+                
+                media += dif;
             }
 
             media /= timeCompletePuzzle.Length;

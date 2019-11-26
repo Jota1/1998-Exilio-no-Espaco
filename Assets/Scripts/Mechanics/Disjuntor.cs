@@ -49,6 +49,7 @@ public class Disjuntor : MonoBehaviour, IInteract
     void Feedback(AudioClip feedback)
     {
         // Toca som
+        FindObjectOfType<SoundController>().playerAudio.Stop();
         FindObjectOfType<SoundController>().PlaySFX(feedback);
     }
 }
