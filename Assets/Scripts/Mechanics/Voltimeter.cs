@@ -48,7 +48,7 @@ public class Voltimeter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if(voltimeter.value >= randomMark.value - 0.05f  && voltimeter.value <= randomMark.value + 0.05f)
+            if(voltimeter.value >= randomMark.value - 0.09f  && voltimeter.value <= randomMark.value + 0.09f)
             {
                 RightTiming();
             } else
