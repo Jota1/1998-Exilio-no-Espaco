@@ -34,6 +34,7 @@ public class Cheat : MonoBehaviour
         {
             player.transform.position = sala3.position;
             FindObjectOfType<PuzzleController>().puzzleOrder = 3;
+            Player.detect_sala_criogenia_P3 = true;
             FindObjectOfType<UIController>().actualPuzzle = 3;
             FindObjectOfType<Inventory>().ClearList();
             Disjuntor.fusiveisColocados = true;

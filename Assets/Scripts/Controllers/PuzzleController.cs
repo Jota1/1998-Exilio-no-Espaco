@@ -38,6 +38,7 @@ public class PuzzleController : MonoBehaviour
     {
         if (puzzleOrder == 3 && !endGame && Player.detect_sala_criogenia_P3)
         {
+            timeCounterP3.SetActive(true);
             totalTime -= Time.deltaTime;
             TimerPuzzle3(totalTime);
         }
