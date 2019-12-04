@@ -14,6 +14,7 @@ public class SoundController : MonoBehaviour
     // Play Feedback
     public void PlaySFX(AudioClip effect)
     {
+        playerAudio.Stop();
         playerAudio.PlayOneShot(effect);
     }
 
