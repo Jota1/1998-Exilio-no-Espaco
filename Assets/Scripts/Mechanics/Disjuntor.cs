@@ -35,6 +35,7 @@ public class Disjuntor : MonoBehaviour, IInteract
 
             if (voltimeterPuzzle.forceRestore && fusiveisColocados)
             {
+                // Finish puzzle 1
                 Feedback(positiveFeedback);
                 puzzleController.FinishPuzzle1();
             }
