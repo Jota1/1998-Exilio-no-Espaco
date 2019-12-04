@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour
     void Start()
     {
         wasdCounter = 0;
-        dialogo_TXT_Tutorial.text = "Use WASD para se movimentar";
+        dialogo_TXT_Tutorial.text = "Use W A S D para se movimentar";
     }
     
     void Update()
@@ -48,7 +48,7 @@ public class Tutorial : MonoBehaviour
         if (wasdCounter >= 400)
         {
             tutoMovFinalizado = true;
-            dialogo_TXT_Tutorial.text = "Aperte'Espaço' para desligar gravidade";
+            dialogo_TXT_Tutorial.text = "Aperte 'espaço' para desligar gravidade";
 
             Debug.Log("Tuto mov finalizado");
         }
