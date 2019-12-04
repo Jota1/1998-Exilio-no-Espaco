@@ -120,9 +120,6 @@ public class Voltimeter : MonoBehaviour
 
     void Complete()
     {
-        voltimeterBar.SetActive(false);
-        countRights = 0;
-        completeMinigame = true;
 
         if (FindObjectOfType<PuzzleController>().puzzleOrder == 1)
         {
@@ -141,11 +138,15 @@ public class Voltimeter : MonoBehaviour
             voltimeterObj[2].forceRestore = true;
             FindObjectOfType<PuzzleController>().FinishPuzzle3();
         }
+
+        countRights = 0;
+        completeMinigame = true;
+        voltimeterBar.SetActive(false);
     }
 
     void Fail()
     {
-        voltimeterBar.SetActive(false);
+        // voltimeterBar.SetActive(false);
         countRights = 0;
         completeMinigame = false;
     }
