@@ -7417,7 +7417,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268250521}
-  m_LocalRotation: {x: 0.025509479, y: -0.7734463, z: 0.031189337, w: 0.63258}
+  m_LocalRotation: {x: 0.025509471, y: -0.7734463, z: 0.031189345, w: 0.63258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20327,6 +20327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chave
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0269b0c727331384aa934fe8283f7df2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interagivel
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0269b0c727331384aa934fe8283f7df2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24745,7 +24750,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823231603}
-  m_LocalRotation: {x: 0.020932447, y: -0.7736517, z: 0.025593748, w: 0.6327479}
+  m_LocalRotation: {x: 0.020932447, y: -0.7736517, z: 0.02559376, w: 0.6327478}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -31069,6 +31074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cartao_Acesso
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4efada4bab15c5a44950fa9198117a9f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interagivel
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4efada4bab15c5a44950fa9198117a9f,
         type: 3}
@@ -59590,6 +59600,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a65976f049330904193092eaa0e8f693,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interagivel
+      objectReference: {fileID: 0}
     - target: {fileID: 5232488858435980449, guid: a65976f049330904193092eaa0e8f693,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -64358,8 +64373,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: -0.071374625, y: -0.7691398, z: -0.08726877, w: 0.6290579}
-  m_LocalPosition: {x: 0.7904326, y: -0.8219609, z: 0.15998888}
+  m_LocalRotation: {x: 0.038738247, y: -0.7726245, z: 0.04736463, w: 0.63190776}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 861425628}
