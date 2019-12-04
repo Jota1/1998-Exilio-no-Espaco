@@ -29,6 +29,9 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public bool CheckCondition()
     {
+        if (FindObjectOfType<PuzzleController>().puzzleOrder == 2 && FindObjectOfType<Inventory>().CheckCondition(condition[0]))
+            return true;
+
         return FindObjectOfType<Inventory>().CheckCondition(condition[0]) && FindObjectOfType<Inventory>().CheckCondition(condition[1]);
     }
 }
