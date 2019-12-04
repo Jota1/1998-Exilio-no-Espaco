@@ -7417,7 +7417,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268250521}
-  m_LocalRotation: {x: 0.02550948, y: -0.7734463, z: 0.03118934, w: 0.63258}
+  m_LocalRotation: {x: 0.025509482, y: -0.7734463, z: 0.031189337, w: 0.63258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18687,7 +18687,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609274359}
-  m_LocalRotation: {x: 0.02450563, y: -0.7734948, z: 0.029962681, w: 0.63261956}
+  m_LocalRotation: {x: 0.024505628, y: -0.7734948, z: 0.02996268, w: 0.63261956}
   m_LocalPosition: {x: 1.767692, y: 1.551961, z: 0.3577931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -24745,7 +24745,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823231603}
-  m_LocalRotation: {x: 0.020932445, y: -0.7736517, z: 0.025593754, w: 0.6327479}
+  m_LocalRotation: {x: 0.020932443, y: -0.7736517, z: 0.025593752, w: 0.6327479}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -64358,7 +64358,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001908997}
-  m_LocalRotation: {x: 0.038738243, y: -0.7726244, z: 0.04736461, w: 0.63190776}
+  m_LocalRotation: {x: 0.03873825, y: -0.7726245, z: 0.047364626, w: 0.63190776}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -70604,8 +70604,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9271522, y: 2.5309372, z: 1.7535706}
-  m_Center: {x: -0.75359225, y: -0.6474447, z: -0.22796822}
+  m_Size: {x: 1.9271522, y: 3.1975803, z: 1.7535706}
+  m_Center: {x: -0.75359225, y: -0.31412315, z: -0.22796822}
 --- !u!1 &4581150985756163064
 GameObject:
   m_ObjectHideFlags: 0
@@ -70979,7 +70979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameItem: Ferramenta
-  condition: Codigo
+  condition: "C\xF3digo"
   puzzleNumber: 2
   disappear: 0
   showInInventory: 1
