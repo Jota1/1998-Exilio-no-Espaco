@@ -22,6 +22,7 @@ public class VoltimeterActive : MonoBehaviour, IInteract
 
     public void Interaction()
     {
+        // Interação com o voltimetro
         if(CheckCondition() && FindObjectOfType<PuzzleController>().puzzleOrder == puzzleNumber && Disjuntor.fusiveisColocados && !forceRestore)
             voltimeterController.ActiveVoltimeter();
     }

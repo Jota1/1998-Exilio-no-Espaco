@@ -279,6 +279,7 @@ public class Player : MonoBehaviour
             Debug.Log("Porta Para Sala Gravidade");
         }
 
+        // Detecção para o final do jogo
         if (objCol.tag == "Detect_Sala_Criogenia" && FindObjectOfType<PuzzleController>().puzzleOrder == 3)
         {
             startPuzzle3.GetComponent<LoreController>().CallEventDialogue();
