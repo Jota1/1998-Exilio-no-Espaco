@@ -213,6 +213,7 @@ public class Player : MonoBehaviour
     //mudança de estados do jogador (flutuando / no chão)
     void ChangeStates()
     {
+        // Atualizações movimentação
         if (state == States.floating && state != States.grounded)
         {
             playerAnimator.SetBool("Float", true);

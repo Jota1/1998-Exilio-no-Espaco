@@ -29,6 +29,7 @@ public class Voltimeter : MonoBehaviour
     {
         RandomizeMark();
 
+        
         voltimeterBar.SetActive(false);
         countRights = 0;
         voltimeter.value = 0.025f;

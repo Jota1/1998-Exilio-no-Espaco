@@ -30,6 +30,7 @@ public class AIController : MonoBehaviour
 
         if (calculateTime)
         {
+            // Ajuste de time
             calculateTime = false;
             ReactChoice();
         }
