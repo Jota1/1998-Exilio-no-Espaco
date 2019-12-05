@@ -21,8 +21,8 @@ public class Voltimeter : MonoBehaviour
     public float voltValue;
     public float modSpeed;
 
-    public AudioClip positiveFeedback;
-    public AudioClip negativeFeedback;
+    public AudioClip[] positiveFeedback;
+    public AudioClip[] negativeFeedback;
 
     // Start is called before the first frame update
     void Start()
@@ -152,10 +152,12 @@ public class Voltimeter : MonoBehaviour
         completeMinigame = false;
     }
 
-    void Feedback(AudioClip feedback)
+    void Feedback(AudioClip[] feedback)
     {
+        int r = Random.Range(0, feedback.Length);
+
         // Toca som
-        FindObjectOfType<SoundController>().PlaySFX(feedback);
+        FindObjectOfType<SoundController>().PlaySFX(feedback[r]);
     }
 
     public void ActiveVoltimeter()

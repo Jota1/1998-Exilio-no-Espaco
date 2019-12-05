@@ -76,6 +76,7 @@ public class AIController : MonoBehaviour
 
             FindObjectOfType<PuzzleController>().totalTime = minTime[2] + media;
 
+        // Retorna valor minimo
         if (FindObjectOfType<PuzzleController>().totalTime < minTime[2])
             FindObjectOfType<PuzzleController>().totalTime = minTime[2];
 
