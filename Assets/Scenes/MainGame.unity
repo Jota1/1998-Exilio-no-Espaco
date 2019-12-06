@@ -72286,7 +72286,7 @@ PrefabInstance:
     - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}
       propertyPath: torqueForcer
-      value: 50
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}
