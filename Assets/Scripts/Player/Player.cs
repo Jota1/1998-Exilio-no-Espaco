@@ -84,9 +84,13 @@ public class Player : MonoBehaviour
     {
         //atualizando fisica com base na gravidade / estados do jogador
         if (state == States.grounded)
-            BasicMovement();
-        else if(state == States.floating )
         {
+            // rb.isKinematic = false;
+            BasicMovement();
+        }
+        else if (state == States.floating)
+        {
+            // rb.isKinematic = true;
             ZeroGravityMovement();
         }              
     }
@@ -189,12 +193,14 @@ public class Player : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.up * torqueForcer, ForceMode.Impulse);
+            // rb.velocity = Vector3.up * torqueForcer * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.LeftControl) && state == States.floating)
         {
             rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.down * torqueForcer, ForceMode.Impulse);
+            // rb.velocity = Vector3.down * torqueForcer * Time.deltaTime;
         }
     }
     #endregion
@@ -213,6 +219,7 @@ public class Player : MonoBehaviour
     //mudança de estados do jogador (flutuando / no chão)
     void ChangeStates()
     {
+        // Atualizações movimentação
         if (state == States.floating && state != States.grounded)
         {
             playerAnimator.SetBool("Float", true);
@@ -229,6 +236,7 @@ public class Player : MonoBehaviour
     //calculo de add force ao jogador (inicio da gravidade zero)
     public void AddImpact(Vector3 dir, float force)
     {
+        // Normalize
         dir.Normalize();
 
         if (dir.y < 0)        

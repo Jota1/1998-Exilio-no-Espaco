@@ -31524,6 +31524,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
         type: 3}
+      propertyPath: negativeFeedback.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
       propertyPath: voltimeterBar
       value: 
       objectReference: {fileID: 1868347526}
@@ -31531,12 +31536,12 @@ PrefabInstance:
         type: 3}
       propertyPath: positiveFeedback
       value: 
-      objectReference: {fileID: 8300000, guid: e53165ef94deb874e93d253ee5a84196, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
         type: 3}
       propertyPath: negativeFeedback
       value: 
-      objectReference: {fileID: 8300000, guid: d8d1ae6c1ee44774a8b7bbd3a14fc01d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
         type: 3}
       propertyPath: voltimeterObj.Array.data[1]
@@ -31552,6 +31557,16 @@ PrefabInstance:
       propertyPath: voltimeterObj.Array.data[2]
       value: 
       objectReference: {fileID: 1359694632}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
+      propertyPath: negativeFeedback.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f26f2788c43aa4e409ccfde677653f83, type: 3}
+    - target: {fileID: 616052117707484834, guid: 8e36d89f4472f3d459a41f178d6f9589,
+        type: 3}
+      propertyPath: negativeFeedback.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2936d727c8ac4bc4c8c75934b7968626, type: 3}
     - target: {fileID: 616052117738338237, guid: 8e36d89f4472f3d459a41f178d6f9589,
         type: 3}
       propertyPath: m_IsActive
@@ -72271,7 +72286,7 @@ PrefabInstance:
     - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}
       propertyPath: torqueForcer
-      value: 0.3
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2169948228385676406, guid: 71c7d5037432f6446accfbef21c639fd,
         type: 3}

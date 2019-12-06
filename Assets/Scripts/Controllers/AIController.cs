@@ -30,6 +30,7 @@ public class AIController : MonoBehaviour
 
         if (calculateTime)
         {
+            // Ajuste de time
             calculateTime = false;
             ReactChoice();
         }
@@ -75,6 +76,7 @@ public class AIController : MonoBehaviour
 
             FindObjectOfType<PuzzleController>().totalTime = minTime[2] + media;
 
+        // Retorna valor minimo
         if (FindObjectOfType<PuzzleController>().totalTime < minTime[2])
             FindObjectOfType<PuzzleController>().totalTime = minTime[2];
 
