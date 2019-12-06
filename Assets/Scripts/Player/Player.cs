@@ -216,7 +216,7 @@ public class Player : MonoBehaviour
         StartCoroutine(Back_Gravity());
     }
 
-    //mudança de estados do jogador (flutuando / no chão)
+    //mudança de estados do jogador (flutuando / no chao)
     void ChangeStates()
     {
         // Atualizações movimentação
